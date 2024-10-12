@@ -21,5 +21,9 @@ export default defineConfig({
     // rehypePlugins: [rehypeAccessibleEmojis],
   },
 
-  adapter: vercel(),
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
