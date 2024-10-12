@@ -1,50 +1,60 @@
 ---
-interface Props {
-	title: string;
+export interface Props {
+  title: string;
 }
 
 const { title } = Astro.props;
+
+// import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Shubham Rasal" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/code.svg" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for My Website"
+      href="rss.xml"
+    />
+    <meta name="generator" content={Astro.generator} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content="/preview.png" />
+    <link rel="stylesheet" href="/globals.css" />
+    <!-- <SpeedInsights /> -->
+    <title>{title}</title>
+  </head>
+  <body
+    class="text-slate-300 min-h-screen w-full mx-auto top-0 z-[-2] from-gray-900 to-gray-800 bg-gradient-to-b"
+  >
+    <div
+      class="sticky top-0 z-10 w-full p-2 flex items-center h-16 justify-center"
+    >
+      <nav class="text-slate-300 p-1 flex w-auto">
+        <div class="p-2 font-semibold rounded-full mx-1">
+          <a href="/">About</a>
+        </div>
+        <div class="flex dark:font-light font-normal">
+          <div
+            class="p-2 items-center flex rounded-full mx-2 dark:hover:text-white hover:underline"
+          >
+            <a href="/projects">Projects</a>
+          </div>
+          <div
+            class="p-2 items-center flex rounded-full mx-2 dark:hover:text-white hover:underline"
+          >
+            <a href="/blog" class="">Writing</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <slot />
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
