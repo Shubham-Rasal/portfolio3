@@ -16,5 +16,3 @@ Future blogs will mostly be related to the following topics:
 
 I am not sure if I will be able to keep up the consistency of writing blogs, but I will try my best to write at least one blog post every month.
 
-
-
