@@ -6,8 +6,18 @@ import { getCollection } from "astro:content";
 // Get all entries from a collection.
 // Requires the name of the collection as an argument.
 // Example: retrieve `src/content/blog/**`
-const allBlogPosts = await getCollection("blog");
-allBlogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+interface BlogPost {
+  slug: string;
+  data: {
+    title: string;
+    date: Date;
+  };
+}
+
+const allBlogPosts: BlogPost[] = await getCollection("blog");
+allBlogPosts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 console.log(allBlogPosts);
 ---
 
@@ -16,14 +26,16 @@ console.log(allBlogPosts);
   <main class="md:w-1/2 w-3/4 mx-auto justify-center">
     {
       allBlogPosts.map((post) => (
-        <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col md:flex-row text-gray-800">
-          <h2 class="inline-flex text-gray-600 dark:text-gray-400">
-            <span>{post.data.title}</span>
-          </h2>
-          <div class="md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40">
-            {post.data.date.toLocaleDateString()}
-          </div>
-        </article>
+        <a href={`/writing/${post.slug}`}>
+          <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col md:flex-row text-gray-800">
+            <h2 class="inline-flex text-gray-600 dark:text-gray-400">
+              <span>{post.data.title}</span>
+            </h2>
+            <div class="md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40">
+              {post.data.date.toLocaleDateString()}
+            </div>
+          </article>
+        </a>
       ))
     }
   </main>

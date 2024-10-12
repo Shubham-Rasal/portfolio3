@@ -11,7 +11,7 @@ When we got to know about the hackathon problem statements, we immediately start
 
 After going through all the problem statements, we finalized a problem statement related to mental illness onset detection in a college target group. We came up with a elaborate plan and system design which almost included everything that could possibly be put into it (except blockchain, though we got a feedback during the later stage as to why did we not integrate it).
 
-![Mindful AI System Design](../mindful-ai-system-design.png "Mindful AI System Design") *Mindful AI System Design*
+![Mindful AI System Design](./mindful-ai-system-design.png "Mindful AI System Design") *Mindful AI System Design*
 
 We then proceeded to make a fabulous PPT with all the buzz words to make it feel innovative. This got us selected in the top 30 teams that qualified to the offline hackathon at MIT Manipal.
 

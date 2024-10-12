@@ -1,0 +1,86 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+function formatDate(date: Date) {
+  const d = new Date(date);
+  const res = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "medium",
+  }).format(d);
+  return res;
+}
+
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+console.log(entry);
+---
+
+<Layout title={entry.data.title}>
+  <article
+    class="px-6 sm:px-6 py-2 sm:py-16 lg:py-12 mx-auto max-w-4xl text-lg text-slate-300"
+  >
+    <button class="my-8 py-8 flex text-slate-800 dark:text-slate-300">
+      <a href="/blog"> &larr; Back to blog</a>
+    </button>
+    <div
+      class="mx-auto sm:px-6 max-w-3xl prose prose-slate prose-lg dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+    >
+      <h1
+        class="text-xl sm:text-3xl font-bold leading-tight tracking-tight my-4"
+      >
+        {entry.data.title}
+      </h1>
+      <p class="text-gray-600">
+        {formatDate(entry.data.date)}
+      </p>
+
+      <p class="text-gray-600">
+        <!-- {readTime} -->
+      </p>
+
+      <div class="flex flex-wrap my-4">
+        {
+          entry.data.tags.map((tag: any) => (
+            <span class=" text-sm font-bold text-slate-900 mr-2  bg-slate-200 px-2 py-1 rounded-md">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+
+      <Content />
+    </div>
+
+    <div class="comment giscus mt-8"></div>
+  </article>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="Shubham-Rasal/portfolio2"
+    data-repo-id="R_kgDOJuFwsQ"
+    data-category="General"
+    data-category-id="DIC_kwDOJuFwsc4Ce1nf"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async></script>
+</Layout>
+
+<style>
+  h2 {
+    color: red;
+  }
+</style>
