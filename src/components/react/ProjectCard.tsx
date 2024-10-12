@@ -47,13 +47,13 @@ export default function ProjectCard() {
         </div>
       </a>
       <a href="/projects/maazi">
-        <div className="py-3 relative">
+        {/* <div className="py-3 relative">
           <img
             className="w-[40px] drop-shadow-xl"
             src="/code.svg"
             alt="Maazi"
           />
-        </div>
+        </div> */}
         <div className="pb-1">
           <div className="flex items-center gap-[6px] mt-1">
             <h3 className="font-medium text-base">Maazi</h3>
