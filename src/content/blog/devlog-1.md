@@ -1,24 +1,18 @@
 ---
 title: "DEVLOG #1"
 slug: devlog-1
-date: 2024-11-07
+date: 2024-10-03
 author: Shubham Rasal
 tags:
   - programming
   - map
   - nextjs
   - supabase
+  - devlog
 ---
-
 I have always wanted to write technical blogs but I was lazy. But then I recently say few indie hackers publishing what they do on a weekly basis. I felt this writing format is something that I can try and hopefully stick to in the long run.
 
-Since this is the first devlog of my currently active projects, it will be a long one.
 
-## 1. ApnaHood
-
-This is a project I had started a couple of months back with my friend [Prathamesh](https://x.com/SirdesaiEXE) and Miheer when we were hanging out at a cool Momo place. We wanted to know cool and hidden spots around a new city which the locals knew. In our case, we knew all the nice and hidden places around our city, Belgaum, but we wanted a way to let others know about it. 
-
-This project is still under active development, since we have taken it up as a learning experience as well. I use it as a testbed for all the new tech that comes along. For example, if you check the recent commits, you will find out that I have added drizzle ORM support just because I want to learn about ORMs and db migrations.
 
 ## 2. General Inference Engine
 
@@ -51,4 +45,7 @@ The approach I took was to take a bunch of news articles (2018-2021) and perform
 ```
 
 Using the Gemini free LLM API, I was able to get the features for 887 news articles. This helped in finding the best predictors of stock movement and what magnitude will it move with.
+
+
+That's all for this devlog. Stay updated for newer editions!!
 
