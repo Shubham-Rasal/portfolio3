@@ -4,10 +4,10 @@ slug: devlog-3
 date: 2024-11-15
 author: Shubham Rasal
 tags:
-  - programming
+  - business
   - devlog
-  - ai
-  - systems
+  - indie hacking
+  - ui
 ---
 I am back with few updates on the projects I am working on. 
 
