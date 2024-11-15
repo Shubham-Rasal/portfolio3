@@ -31,9 +31,13 @@ Apart from these, we are working on the quests board that will show users intere
 
 ![Popup UI](pop_ui.png)
 
-Now you can click on a message and see how popular a place is, based on the votes, how many people have been there, etc. You also have the option to show directions to that pin, which opens up in a Google Maps instance. The UI of the Popup is made to match the overall map style. The share button is currently non-functional, which when implemented, will give you the option to share the pin to someone.
+Now you can click on a message and see how popular a place is, based on the votes, how many people have been there, etc. 
 
-Minor fixes include, authentication code exchange for PKCE oAuth flow, removal of unimplemented features like the leaderboard (coming soon), responsiveness. 
+You also have the option to show directions to that pin, which opens up in a Google Maps instance. 
+
+The UI of the Popup is made to match the overall map style. The share button is currently non-functional, which when implemented, will give you the option to share the pin to someone.
+
+Minor fixes include, fixing Authentication code exchange for PKCE OAuth flow, removal of unimplemented features like the leaderboard (coming soon), responsiveness improvements. 
 
 ## 2. Maximal Studio Website Re-design 
 
@@ -53,4 +57,4 @@ to this
 
 I hope to find more clients using this site. If you want a website or a software to build quickly, then contact us through the website.
 
-That's it for this devlop. See you in the next edition!!
+That's it for this devlog. See you in the next edition!!
