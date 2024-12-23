@@ -60,3 +60,5 @@ I built a site that can translate any Japanese manga image into an English one.
 This was built using Spheron Network of compute for training (https://spheron.network).
 
 I will explain how I did it in another blog post soon.
+
+This was a wrap-up of all the things I did recently. See you in the next edition!!
