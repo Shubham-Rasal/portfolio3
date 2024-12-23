@@ -34,9 +34,9 @@ We built Khoj (meaning 'search' or 'discovery' in Hindi), a gamified geo-locatio
 
 Khoj transforms traditional scavenger hunts into an immersive blockchain experience with a dream to bring millions of new users to the Web3 world.
 
-![[khoj.png]]
+![Khoj Website](khoj.png)
 
-![[khoj_arch.png]]
+![Khoj App's Architecture](khoj_arch.png)
 
 The technical details about the project can be found in the repo [here](https://github.com/marcdhi/Khoj) and the demo of the project can be found on Youtube - [https://youtu.be/9JETJmd9TOk](https://youtu.be/9JETJmd9TOk)
 
@@ -45,17 +45,17 @@ The technical details about the project can be found in the repo [here](https://
 
 As part of our tool marketing strategy for Maximal Studio, I made a fun little website that can turn your website into a card.
 
-![[cardify.png]]
+![Cardify](cardify.png)
 
 I was pretty happy with the result as the site got around 2000 visitors on the day of the launch. 
 
-![[cardify_visitors.png]]
+![Cardify Visitors](cardify_visitors.png)
 
 ## 4. Otakuverse - AI Manga Translator
 
 I built a site that can translate any Japanese manga image into an English one. 
 
-![[otakuverse.png]]
+![Otakuverse](otakuverse.png)
 
 This was built using Spheron Network of compute for training (https://spheron.network).
 
