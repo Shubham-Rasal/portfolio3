@@ -5,7 +5,6 @@ date: 2023-11-10
 author: Shubham Rasal
 tags: [programming, ai, philosophy]
 ---
-[Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing) algorithm.
 ## Introduction
 
 Today I had an assignment in a Data structures and Algorithms Lab to implement integer multiplication using following:
@@ -18,7 +17,7 @@ The internet was not allowed and I was not on my usual coding setup (vs code).
 I couldn't complete the assignment in time. But I realized something about my way of programming. 
 ## My coding methodology
 
-I use vs code as my primary editor (with vim bindings, yet to become hardcore vi enthusiast) along with GitHub copilot which is a code completion tool. Also I have a lot of language extensions that assist me with awesome autocompletion.
+I use vs code as my primary editor (with vim bindings, yet to become hardcore vi enthusiast) along with GitHub copilot which is a code completion tool. Also I have a lot of language extensions that assist me with awesome auto completion.
 
 Before 2021, when I started coding, I used to spend a lot of time going through stack overflow, GitHub issues, docs to figure out something that made the computer do what I needed.
 
@@ -31,7 +30,7 @@ Computer Science is all about -
 
 `Converting ideas into program through some intermediate steps like algorithms, flowcharts and eventually code. It is to write programs, see that they are understandable and maintainable by humans in future.`
 
-According to me, I lack at all the described aspects. I am bad at reading someone else's code (or my own code after 2 weeks), maintaining my own code itself seems like a daunting task. Also, I try to write code that usually works and solves my current problem and I rarely think about it's understandability.
+According to me, I lack at all the described aspects. I am bad at reading someone else's code (or my own code after 2 weeks), maintaining my own code itself seems like a daunting task. Also, I try to write code that usually works and solves my current problem and I rarely think about it's understand-ability.
 
 To go back to the goal of Computer Science is to convert ideas into programs that can be executed by an von Neuman machine. Can you see that there is no mention of humans in this definition. Why should human be the only ones to write programs. 
 
