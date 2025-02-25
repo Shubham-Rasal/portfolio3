@@ -9,7 +9,7 @@ tags:
   - philosophy
 ---
 
-Disclaimer - heavily inspired by [Suchir Balaji’s View](https://docs.google.com/document/d/1ItRqrpgQHJ05rQx0zc26t1_NgpUcw3znwTWpXxqH8uI/edit?tab=t.0) and other recent papers. Also, not very structured.
+Disclaimer - heavily inspired by [Suchir Balaji’s View](https://docs.google.com/document/d/1ItRqrpgQHJ05rQx0zc26t1_NgpUcw3znwTWpXxqH8uI/edit?tab=t.0) and other recent papers. Also, this blog post is not very structured.
 
 ## What is intelligence really?
 
@@ -40,7 +40,7 @@ One requirement is obvious - it should be data efficient from the start. This i
 
 The second requirement would be to have the ability to reuse neurons for multiple recurrent computations that are distinct. This also ensures the data efficiency of our brain
 
-Due to my limited knowledge of the field, I am not sure if the reusable part is true or not. Needs to fact-check.
+Due to my limited knowledge of the field, I am not sure if the reusable part is true or not. Need to fact-check.
 
 ## What are we trying to make?
   
