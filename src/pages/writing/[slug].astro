@@ -21,7 +21,7 @@ function formatDate(date: Date) {
 // 2. For your template, you can get the entry directly from the prop
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-console.log(entry);
+// console.log(entry);
 ---
 
 <Layout title={entry.data.title}>

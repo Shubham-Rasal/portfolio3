@@ -18,7 +18,7 @@ const allBlogPosts: BlogPost[] = await getCollection("blog");
 allBlogPosts.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
-console.log(allBlogPosts);
+// console.log(allBlogPosts);
 ---
 
 <Layout title="Writing">
