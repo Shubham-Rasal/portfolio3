@@ -1,7 +1,7 @@
 ---
 title: "DEVLOG #4"
 slug: devlog-4
-date: 2024-02-22
+date: 2025-02-22
 author: Shubham Rasal
 tags:
   - hacking

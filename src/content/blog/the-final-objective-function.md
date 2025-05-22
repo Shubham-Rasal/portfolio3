@@ -1,7 +1,7 @@
 ---
 title: The Final Objective Function
 slug: the-final-objective-function
-date: 2025-02-25
+date: 2025-03-19
 author: Shubham Rasal
 tags:
   - programming

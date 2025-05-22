@@ -1,5 +1,5 @@
 ---
-title: Guide to Engineering Colleges
+title: Guide to Engineering Colleges (WIP)
 slug: guide-to-engineering-colleges
 date: 2025-01-02
 author: Shubham Rasal
@@ -42,3 +42,6 @@ If fact, I would go out and say that it matters a lot. The branch you have got m
 - occupies a mental space that can't be discarded
 - 4 years 
 
+## Having fun
+
+After sorting out the above mentioned points, optimise for having fun. This time is the last time where you will have no obligations to do anything. This will change in future as soon as you leave the college. Best luck with your journey 
