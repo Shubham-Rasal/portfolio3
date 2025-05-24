@@ -4,9 +4,8 @@ slug: working-hard
 date: 2025-05-13
 author: Shubham Rasal
 tags:
-  - programming
-  - ai
   - philosophy
+  - life
 ---
 ## Introduction
 

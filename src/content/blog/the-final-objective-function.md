@@ -4,9 +4,9 @@ slug: the-final-objective-function
 date: 2025-03-19
 author: Shubham Rasal
 tags:
-  - programming
   - ai
   - philosophy
+  - agi
 ---
 
 Yeah the title is a little misleading if you have no context what I was thinking about the last few weeks.

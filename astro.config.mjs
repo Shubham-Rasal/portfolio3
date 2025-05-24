@@ -9,9 +9,11 @@ import remarkToc from 'remark-toc';
 
 import vercel from '@astrojs/vercel/serverless';
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()],
+  integrations: [tailwind(), react(), mdx()],
   output: 'static',
 
   markdown: {

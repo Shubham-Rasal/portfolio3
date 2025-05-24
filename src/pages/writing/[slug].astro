@@ -1,11 +1,23 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import { render } from "astro:content";
+import { getEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
+  const interactiveBlogEntries = await getCollection("interactiveBlog");
+  const blogEntriesWithId = blogEntries.filter((entry) => entry.id);
+  const interactiveBlogEntriesWithId = interactiveBlogEntries.filter(
+    (entry) => entry.id
+  );
+  const allEntries = [...blogEntriesWithId, ...interactiveBlogEntriesWithId];
+  allEntries.sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+  return allEntries.map((entry) => ({
+    // Use the entry id to create the path
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
@@ -20,8 +32,12 @@ function formatDate(date: Date) {
 
 // 2. For your template, you can get the entry directly from the prop
 const { entry } = Astro.props;
-const { Content } = await entry.render();
-// console.log(entry);
+const post = await getEntry("blog", entry.id) || await getEntry("interactiveBlog", entry.id);
+if (post === undefined) {
+  return Astro.redirect("/404");
+}
+const { Content } = await render(post);
+
 ---
 
 <Layout title={entry.data.title}>
@@ -57,7 +73,7 @@ const { Content } = await entry.render();
         }
       </div>
 
-      <Content />
+      <Content components={{}}/>
     </div>
 
     <div class="comment giscus mt-8"></div>

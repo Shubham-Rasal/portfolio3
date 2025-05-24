@@ -7,26 +7,31 @@ import { getCollection } from "astro:content";
 // Requires the name of the collection as an argument.
 // Example: retrieve `src/content/blog/**`
 interface BlogPost {
-  slug: string;
+  slug?: string;
+  id?: string; // Optional for interactive blog posts
   data: {
     title: string;
     date: Date;
   };
 }
 
+
 const allBlogPosts: BlogPost[] = await getCollection("blog");
-allBlogPosts.sort(
+const allInteractiveBlogPosts: BlogPost[] = await getCollection("interactiveBlog");
+
+const allPosts = [...allBlogPosts, ...allInteractiveBlogPosts];
+allPosts.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
-// console.log(allBlogPosts);
+console.log(allBlogPosts.length)
 ---
 
 <Layout title="Writing">
   <h1 class="text-2xl font-bold text-center my-4">Writing</h1>
   <main class="md:w-1/2 w-3/4 mx-auto justify-center">
     {
-      allBlogPosts.map((post) => (
-        <a href={`/writing/${post.slug}`}>
+      allPosts.map((post) => (
+        <a href={`/writing/${post.slug || post.id}`} class="no-underline">
           <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col md:flex-row text-gray-800">
             <h2 class="inline-flex text-gray-600 dark:text-gray-400">
               <span>{post.data.title}</span>

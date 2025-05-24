@@ -1,12 +1,11 @@
 ---
-title: Guide to Engineering Colleges (WIP)
+title: Guide to Engineering Colleges
 slug: guide-to-engineering-colleges
-date: 2025-01-02
+date: 2025-05-25
 author: Shubham Rasal
 tags:
-  - programming
-  - ai
-  - philosophy
+  - life
+  - experience
 ---
 Navigating an engineering college can overwhelming sometimes. I am writing this from my own experiences. So take any advice in this blog with a grain of salt.
 

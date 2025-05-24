@@ -4,9 +4,9 @@ slug: on-reasoning
 date: 2025-02-25
 author: Shubham Rasal
 tags:
-  - programming
   - ai
   - philosophy
+  - agi
 ---
 
 Disclaimer - heavily inspired by [Suchir Balaji’s View](https://docs.google.com/document/d/1ItRqrpgQHJ05rQx0zc26t1_NgpUcw3znwTWpXxqH8uI/edit?tab=t.0) and other recent papers. Also, this blog post is not very structured.
