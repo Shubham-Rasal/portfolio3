@@ -15,7 +15,7 @@ disclaimer - this post is not for people who have already figured out what they 
 
 If you have joined a college close to your house, then this might not be as relevant. But for those who have moved to a far away place, please make sure to fix a schedule.
 
-There is a very quote from atomic habits - `**You do not rise to the level of your goals.** **You fall to the level of your systems.**`
+There is a very quote from atomic habits - **You do not rise to the level of your goals. You fall to the level of your systems.**
 
 One of the most essential systems in your college life will be a schedule. It doesn't mean that you have to remove the fun out of it. In fact, add it as a definitive slot. Make it as long as you want.
 
