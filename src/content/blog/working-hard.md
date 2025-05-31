@@ -27,3 +27,11 @@ Measuring long term goals is really hard. This maybe because your monkey brain i
 I am particularly choosing working hard as my goal because it helps me measure myself accurately. I tend to compare myself a lot and this goal would give an outlet for that comparison. Although I still somewhat care about the outcome of the work that I put in, I plan to reduce it.
 
 This ties surprisingly well into the *Karma* philosophy from *Bhagwat Geta*, at least in the way I interpret it.
+
+## Defining work
+
+This is essential since work has a lot of meanings to people. For me, I tend to define work as something that generates output. I solely try to measure the quantity work by the amount of output it gets. This works for me, since I have clearly defined goals and measurable metrics to track progress. I don't count the hours or effort (what is is really?) required to achieve the goals.
+
+All this is true for me since I am a knowledge worker. I provide value by using my mind and not physical labor. Due to this, we can use the traditional physics-based definition of work which is: distance x force.
+
+Knowledge work has huge leverage
