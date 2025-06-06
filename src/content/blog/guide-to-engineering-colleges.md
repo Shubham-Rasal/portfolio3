@@ -1,7 +1,7 @@
 ---
 title: Guide to Engineering Colleges
 slug: guide-to-engineering-colleges
-date: 2025-05-25
+date: 2025-05-05
 author: Shubham Rasal
 tags:
   - life

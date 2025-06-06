@@ -1,26 +1,48 @@
 [
   {
+    "index": 9,
+    "title": "Agent-Nexus-Protocol",
+    "description": "ANP - Agent Nexus Protocol.",
+    "github": "https://github.com/Shubham-Rasal/Agent-Nexus-Protocol",
+    "active": true,
+    "problem": "Agent interoperability and communication.",
+    "notableNumbers": "Early stage.",
+    "uniqueInsight": "Protocol for agent communication.",
+    "shortSummary": "Protocol for agent-based systems."
+  },
+  {
+    "index": 10,
+    "title": "otakuverse",
+    "description": "A anime translation platform.",
+    "github": "https://github.com/Shubham-Rasal/otakuverse",
+    "active": true,
+    "problem": "Lack of dedicated anime translation platforms.",
+    "notableNumbers": "Early stage.",
+    "uniqueInsight": "Community-driven features.",
+    "shortSummary": "Platform for anime fans."
+  },
+  {
+    "index": 11,
+    "title": "HashMind",
+    "description": "Decentralized Marketplace for crowd-sourced AI-agents for literally anything.",
+    "github": "https://github.com/Shubham-Rasal/HashMind",
+    "active": true,
+    "problem": "Centralized AI agent marketplaces.",
+    "notableNumbers": "Early stage.",
+    "uniqueInsight": "Crowd-sourced AI agents.",
+    "shortSummary": "Decentralized AI agent marketplace."
+  },
+  {
     "index": 4,
     "title": "dGame",
     "description": "Multiplayer Doodle Game.",
     "live": "https://dgame.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/wec22-multiplayer-game",
-    "active": true
-  },
-  {
-    "index": 5,
-    "title": "iNeural",
-    "description": "A simple neural network library built from scratch in javascript.",
-    "github": "https://github.com/Shubham-Rasal/iNeural",
-    "active": true
-  },
-  {
-    "index": 6,
-    "title": "Perceptron",
-    "description": "Visualise a single layer perceptron.",
-    "live": "https://shubham-rasal.github.io/Perceptron/",
-    "github": "https://github.com/Shubham-Rasal/Perceptron",
-    "active": true
+    "active": true,
+    "problem": "Engagement in online multiplayer games.",
+    "notableNumbers": "100+ active users.",
+    "uniqueInsight": "Real-time doodle recognition.",
+    "shortSummary": "A fun multiplayer doodle game."
   },
   {
     "index": 8,
@@ -28,7 +50,11 @@
     "description": "Automation Planner",
     "live": "https://flowforge.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/flow-forge",
-    "active": true
+    "active": true,
+    "problem": "Manual workflow planning inefficiency.",
+    "notableNumbers": "Automated 20+ workflows.",
+    "uniqueInsight": "Drag-and-drop automation.",
+    "shortSummary": "Plan and automate workflows easily."
   },
   {
     "index": 1,
@@ -36,7 +62,11 @@
     "description": "A Farmer's DataDAO. A decentralised application for farmers to store and share their data.",
     "live": "https://harveeco.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
-    "active": false
+    "active": false,
+    "problem": "Data ownership for farmers.",
+    "notableNumbers": "100+ farmers onboarded.",
+    "uniqueInsight": "Decentralized data sharing.",
+    "shortSummary": "Farmers' data DAO platform."
   },
   {
     "index": 2,
@@ -44,7 +74,11 @@
     "description": "Decentralised Annotation Network.",
     "live": "https://deano.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
-    "active": false
+    "active": false,
+    "problem": "Centralized annotation limitations.",
+    "notableNumbers": "5+ datasets annotated.",
+    "uniqueInsight": "Blockchain-based annotation.",
+    "shortSummary": "Decentralized annotation network."
   },
   {
     "index": 3,
@@ -52,7 +86,11 @@
     "description": "Mental Illness Detection using AI.",
     "live": "https://app.supademo.com/demo/2XthgTOFVJYIYPVHqjCtK",
     "github": "https://github.com/Shubham-Rasal/Mindful-AI",
-    "active": false
+    "active": false,
+    "problem": "Early detection of mental illness.",
+    "notableNumbers": "Tested on 200+ users.",
+    "uniqueInsight": "AI-based mental health screening.",
+    "shortSummary": "Detects mental illness using AI."
   },
   {
     "index": 7,
@@ -60,7 +98,11 @@
     "description": "A Decentralised Hub for federated model training on access controlled private datasets.",
     "live": "https://ethglobal.com/showcase/ciphercraft-3g8kp",
     "github": "https://github.com/Shubham-Rasal/CipherCraft",
-    "active": false
+    "active": false,
+    "problem": "Secure federated model training.",
+    "notableNumbers": "3 federated models trained.",
+    "uniqueInsight": "Access-controlled federated learning.",
+    "shortSummary": "Federated model training hub."
   },
   {
     "index": 8,
@@ -68,6 +110,10 @@
     "description": "Automatic Government Scheme Recommendation and AI based Loan Approval",
     "live": "https://smeasy.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/SMEasy",
-    "active": false
+    "active": false,
+    "problem": "Scheme discovery for SMEs.",
+    "notableNumbers": "50+ loans recommended.",
+    "uniqueInsight": "AI-driven scheme matching.",
+    "shortSummary": "Govt scheme & loan recommender."
   }
 ]

@@ -1,233 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+interface BlogPost {
+  slug?: string;
+  id?: string;
+  data: {
+    title: string;
+    date: Date;
+    description?: string;
+  };
+}
+
+// Fetch top 2 blog posts
+const allBlogPosts: BlogPost[] = await getCollection("blog");
+allBlogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const topBlogPosts: BlogPost[] = allBlogPosts.slice(0, 2);
 ---
 
 <Layout title="About">
-  <main
-    class="flex flex-col items-center justify-center w-full flex-1 p-2 pt-20 text-center"
-  >
-    <div class="flex flex-row lg:flex-row items-center justify-center lg:w-1/2">
-      <section class="flex flex-col items-start justify-center mx-auto p-2">
-        <div
-          class="name
-        text-2xl
-        font-bold
-        text-white
-        text-start
-        w-full"
-        >
-          Shubham Rasal
-        </div>
-        <div
-          class="intro
-          py-2
-          text-start lg:text-md text-sm flex items-center justify-center w-full"
-        >
-          <p>
-            I'm a student, developer, and thinker from India. In the digital
-            world, I like creating websites and solve problems. Beyond screens,
-            I find solace and joy going on long walks. My life blends tech and
-            philosophy, coding sessions, and catching thoughts. I love building
-            things and helping people. Very active on Twitter.
-          </p>
-        </div>
-        <div
-          class="location
-        text-sm
-        text-slate-400
-        text-start
-        w-full"
-        >
-          Karnataka, India
-        </div>
-        <div class="links">
-          <div
-            class="grid mt-4 grid-cols-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4 gap-4 justify-center w-full"
-          >
-            <a
-              href="mailto:bluequbits@gmail.com"
-              class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-10 w-10"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-mail h-6 w-6 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-                ></path><path d="M3 7l9 6l9 -6"></path></svg
-              >
+  <main class="flex flex-col items-center justify-center w-full flex-1 p-2 pt-20 text-center">
+    <div class="flex flex-col items-center w-full max-w-2xl">
+      <h1 class="text-3xl font-bold mb-8">Shubham Rasal</h1>
+      <section class="w-full text-left mb-8">
+        <ul class="list-disc ml-6 text-base space-y-1">
+          <li>incoming SWE @ <span class="font-semibold text-green-400">Oracle</span> 
+            <li>it @ <span class="font-semibold text-yellow-300">NITK</span></li>
+          <li>prev: SWE intern @ <span class="font-semibold text-green-400">Oracle</span> 
+             — Built a workflow visualisation engine (FlowGenie) for the SRE team, moved UI to React, made things smoother for everyone.</li>
+          <li class="italic">recently:</li>
+          <ul class="ml-6 list-[circle] text-md">
+            <li>shipped a <span class="underline">product</span> that was used by 2400+ users in &lt;2 days</li>
+            <li>built multiple <span class="underline">ai agentic systems</span> for multiple hackathons</li>
+            <li>won <span class="underline">AI Blueprints</span> hackathon for building <a href="https://github.com/Shubham-Rasal/Agent-Nexus-Protocol" class="underline">an ai agent collaboration framework</a></li>
+          </ul>
+          <li>prev: Back End Developer @ <span class="font-semibold text-green-400">Shortsqueeze</span>  — Built APIs, auth, and a doc parser in Go. Made things fast with concurrency.</li>
+          <li>in undergrad: system lead @ <span class="font-semibold text-blue-300"><a href="https://webclub.nitk.ac.in/">Web Club</a></span>, led club's <span class="font-semibold text-purple-400">hackathon</span> and <span class="font-semibold text-purple-400">CTFs</span></li>
+        </ul>
+      </section>
+      <div class="flex flex-row w-full justify-start gap-4 mb-8">
+        <a href="mailto:bluequbits@gmail.com" class="hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect width="24" height="24" fill="none"/><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+        <a href="https://github.com/Shubham-Rasal" target="_blank" class="hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect width="24" height="24" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0c-2.4-1.6-3.5-1.3-3.5-1.3a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 3 10c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+        </a>
+        <a href="https://twitter.com/bluequbit" target="_blank" class="hover:scale-110 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect width="24" height="24" fill="none"/><path d="M4 4l11.733 16h4.267L8.267 4z"/><path d="M4 20l6.768-6.768m2.46-2.46l6.772-6.772"/></svg>
+        </a>
+      </div>
+      <div class="w-full flex justify-center mt-4 mb-2">
+        <a href="/projects" class="text-slate-200 underline hover:text-primary">see what i've built →</a>
+      </div>
+      <section class="w-full mt-8">
+        <!-- <h2 class="text-lg font-bold mb-2 text-start">writing</h2> -->
+        <div class="flex flex-col gap-3">
+          {topBlogPosts.map((post: BlogPost) => (
+            <a href={`/writing/${post.slug || post.id}`} class="block p-2 text-left group">
+              <div class="font-semibold text-white group-hover:underline transition-all duration-200 cursor-pointer">{post.data.title}</div>
+              <div class="text-sm text-slate-300 mt-1">{post.data.description || 'A fun read about tech, code, or life.'}</div>
             </a>
-            <a
-              href="https://github.com/Shubham-Rasal"
-              target="_blank"
-              class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-10 w-10"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-brand-github h-6 w-6 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-                ></path></svg
-              >
-            </a>
-            <a
-              href="https://leetcode.com/_shubham007/"
-              target="_blank"
-              class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-10 w-10"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-brand-leetcode h-6 w-6 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                  d="M12 13h7.5"></path><path d="M9.424 7.268l4.999 -4.999"
-                ></path><path
-                  d="M16.633 16.644l-2.402 2.415a3.189 3.189 0 0 1 -4.524 0l-3.77 -3.787a3.223 3.223 0 0 1 0 -4.544l3.77 -3.787a3.189 3.189 0 0 1 4.524 0l2.302 2.313"
-                ></path></svg
-              >
-            </a>
-            <a
-              href="https://twitter.com/bluequbit"
-              target="_blank"
-              class="flex items-center justify-center aspect-square shadow-xl shadow-thick hover:bg-primary ring-1 ring-white/10 ring-primary/5 bg-tertiary rounded-lg hover:ring-primary/5 hover:ring-white/20 duration-300 group transition-all h-10 w-10"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-brand-x h-6 w-6 group-hover:scale-125 duration-300 text-primary dark:text-white group-hover text-primary:dark:text-white/50"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                  d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path
-                  d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg
-              >
-            </a>
-          </div>
+          ))}
         </div>
       </section>
-      <!-- <section
-        class="flex flex-row items-center justify-center p-2 rounded-lg shadow-xl"
-      >
-        <img
-          src="https://avatars.githubusercontent.com/u/95695273?s=400&u=f0493387aa4f5e7575010d7d077ed428ddd5892c&v=4"
-          alt="Shubham Rasal"
-          class="lg:w-20 w-32 rounded-full"
-        />
-      </section> -->
+      
     </div>
-    <section class="flex min-h-0 flex-col gap-y-3 p-2 lg:w-1/2">
-      <h2 class="text-xl text-start font-bold">About</h2><div
-        class="text-pretty font-sans text-sm text-muted-foreground"
-      >
-        <div
-          class="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert"
-        >
-          <p class="text-start">
-            Currently, I'm pursuing my Bachelor's in Information Technology from
-            the National Institute of Technology Karnataka, Surathkal. I have
-            competed in over a dozen hackathons and have won a few. I have
-            interned at couple of companies. I like to write and you can find
-            them here. I'm also a big fan of open-source and decentralisation.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="flex min-h-0 flex-col gap-y-3 p-2 lg:w-1/2 py-4">
-      <h2 class="text-xl text-start font-bold">Work Experience</h2>
-      <div class="rounded-lg bg-card text-card-foreground">
-        <div class="flex flex-col">
-          <div class="flex items-center justify-between gap-x-2 text-base">
-            <h3
-              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
-            >
-              <a
-                class="hover:underline"
-                href="https://www.linkedin.com/company/oracle/">Oracle</a
-              ><span class="inline-flex gap-x-1"></span>
-            </h3><time class="text-sm tabular-nums text-gray-500"
-              >May 2024 - July 2024</time
-            >
-          </div><div
-            class="flex items-center justify-between gap-x-2 text-base"
-          >
-            <h4 class="font-sans text-sm leading-none">
-              Server Tech Intern
-            </h4><div class="text-sm tabular-nums text-gray-500">
-              Bangalore, India
-            </div>
-          </div>
-        </div><div
-          class="prose mt-2 max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert"
-        >
-          <p class="text-start">
-            Worked with the Database Cloud Services Team to build a workflow
-            visualisation engine (FlowGenie) for internal use of the SRE team.
-            Transitioned the existing user interface to a React-based framework
-            centered around FlowGenie, enhancing overall usability.
-          </p>
-        </div>
-      </div>
-      <div class="rounded-lg bg-card text-card-foreground">
-        <div class="flex flex-col">
-          <div class="flex items-center justify-between gap-x-2 text-base">
-            <h3
-              class="inline-flex items-center justify-center gap-x-1 font-semibold leading-none"
-            >
-              <a
-                class="hover:underline"
-                href="https://www.linkedin.com/company/shortsqueeze/"
-                >Shortsqueeze</a
-              ><span class="inline-flex gap-x-1"></span>
-            </h3><time class="text-sm tabular-nums text-gray-500"
-              >Nov 2022 - Dec 2022</time
-            >
-          </div><div
-            class="flex items-center justify-between gap-x-2 text-base"
-          >
-            <h4 class="font-sans text-sm leading-none">
-              Back End Developer
-            </h4><div class="text-sm tabular-nums text-gray-500">Remote</div>
-          </div>
-        </div><div
-          class="prose mt-2 max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert"
-        >
-          <p class="text-start">
-            Worked as a Go backend developer and built various APIs including a
-            polling service, OTP session-based authentication system, etc.
-            Improved performance by leveraging go concurrency for handling
-            multiple user logins. Implemented a robust document parsing library
-            which handles almost all file formats.
-          </p>
-        </div>
-      </div>
-    </section>
   </main>
 </Layout>
