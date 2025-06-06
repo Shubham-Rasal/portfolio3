@@ -57,12 +57,7 @@ export default function ProjectCard({
             {shortSummary || <span className="opacity-50">No summary provided.</span>}
           </span>
         </div>
-        <div className="flex items-start gap-2 min-h-[28px]">
-          <HiOutlineExclamationCircle className="mt-0.5 text-gray-500 dark:text-gray-300" size={22} />
-          <span className="text-sm md:text-base text-gray-700 dark:text-gray-200">
-            {problem || <span className="opacity-50">No problem specified.</span>}
-          </span>
-        </div>
+       
         <div className="flex items-start gap-2 min-h-[28px]">
           <HiOutlineChartBar className="mt-0.5 text-gray-500 dark:text-gray-300" size={22} />
           <span className="text-sm md:text-base text-gray-700 dark:text-gray-200">

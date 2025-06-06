@@ -5,7 +5,6 @@
     "description": "ANP - Agent Nexus Protocol.",
     "github": "https://github.com/Shubham-Rasal/Agent-Nexus-Protocol",
     "active": true,
-    "problem": "Agent interoperability and communication.",
     "notableNumbers": "Early stage.",
     "uniqueInsight": "Protocol for agent communication.",
     "shortSummary": "Protocol for agent-based systems."
@@ -16,9 +15,8 @@
     "description": "A anime translation platform.",
     "github": "https://github.com/Shubham-Rasal/otakuverse",
     "active": true,
-    "problem": "Lack of dedicated anime translation platforms.",
     "notableNumbers": "Early stage.",
-    "uniqueInsight": "Community-driven features.",
+    "uniqueInsight": "THe model is trained using decentralised GPU Infra.",
     "shortSummary": "Platform for anime fans."
   },
   {
@@ -27,8 +25,7 @@
     "description": "Decentralized Marketplace for crowd-sourced AI-agents for literally anything.",
     "github": "https://github.com/Shubham-Rasal/HashMind",
     "active": true,
-    "problem": "Centralized AI agent marketplaces.",
-    "notableNumbers": "Early stage.",
+    "notableNumbers": "Won multiple bounties in ETHGlobal hackathon.",
     "uniqueInsight": "Crowd-sourced AI agents.",
     "shortSummary": "Decentralized AI agent marketplace."
   },
@@ -39,22 +36,9 @@
     "live": "https://dgame.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/wec22-multiplayer-game",
     "active": true,
-    "problem": "Engagement in online multiplayer games.",
     "notableNumbers": "100+ active users.",
     "uniqueInsight": "Real-time doodle recognition.",
     "shortSummary": "A fun multiplayer doodle game."
-  },
-  {
-    "index": 8,
-    "title": "Flow Forge",
-    "description": "Automation Planner",
-    "live": "https://flowforge.vercel.app/",
-    "github": "https://github.com/Shubham-Rasal/flow-forge",
-    "active": true,
-    "problem": "Manual workflow planning inefficiency.",
-    "notableNumbers": "Automated 20+ workflows.",
-    "uniqueInsight": "Drag-and-drop automation.",
-    "shortSummary": "Plan and automate workflows easily."
   },
   {
     "index": 1,
@@ -63,7 +47,6 @@
     "live": "https://harveeco.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
     "active": false,
-    "problem": "Data ownership for farmers.",
     "notableNumbers": "100+ farmers onboarded.",
     "uniqueInsight": "Decentralized data sharing.",
     "shortSummary": "Farmers' data DAO platform."
@@ -75,10 +58,9 @@
     "live": "https://deano.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
     "active": false,
-    "problem": "Centralized annotation limitations.",
     "notableNumbers": "5+ datasets annotated.",
     "uniqueInsight": "Blockchain-based annotation.",
-    "shortSummary": "Decentralized annotation network."
+    "shortSummary": "Decentralized annotation network where users can annotate datasets and earn rewards."
   },
   {
     "index": 3,
@@ -87,10 +69,9 @@
     "live": "https://app.supademo.com/demo/2XthgTOFVJYIYPVHqjCtK",
     "github": "https://github.com/Shubham-Rasal/Mindful-AI",
     "active": false,
-    "problem": "Early detection of mental illness.",
-    "notableNumbers": "Tested on 200+ users.",
-    "uniqueInsight": "AI-based mental health screening.",
-    "shortSummary": "Detects mental illness using AI."
+    "notableNumbers": "Early stage.",
+    "uniqueInsight": "AI-based mental health screening for college students.",
+    "shortSummary": "Detects mental illness using ensemble models."
   },
   {
     "index": 7,
@@ -99,8 +80,7 @@
     "live": "https://ethglobal.com/showcase/ciphercraft-3g8kp",
     "github": "https://github.com/Shubham-Rasal/CipherCraft",
     "active": false,
-    "problem": "Secure federated model training.",
-    "notableNumbers": "3 federated models trained.",
+    "notableNumbers": "5 federated models trained.",
     "uniqueInsight": "Access-controlled federated learning.",
     "shortSummary": "Federated model training hub."
   },
@@ -111,8 +91,7 @@
     "live": "https://smeasy.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/SMEasy",
     "active": false,
-    "problem": "Scheme discovery for SMEs.",
-    "notableNumbers": "50+ loans recommended.",
+    "notableNumbers": "Recommends more that 100+ government schemes.",
     "uniqueInsight": "AI-driven scheme matching.",
     "shortSummary": "Govt scheme & loan recommender."
   }
