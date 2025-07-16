@@ -50,27 +50,7 @@ export default function ProjectCard({
         </a>
       </div>
       <p className="text-base text-gray-700 dark:text-gray-200 mb-2 min-h-[36px]">{description}</p>
-      <div className="flex flex-col gap-2 mt-2">
-        <div className="flex items-start gap-2 min-h-[28px]">
-          <HiOutlineDocumentText className="mt-0.5 text-gray-500 dark:text-gray-300" size={22} />
-          <span className="text-sm md:text-base text-gray-700 dark:text-gray-200">
-            {shortSummary || <span className="opacity-50">No summary provided.</span>}
-          </span>
-        </div>
-       
-        <div className="flex items-start gap-2 min-h-[28px]">
-          <HiOutlineChartBar className="mt-0.5 text-gray-500 dark:text-gray-300" size={22} />
-          <span className="text-sm md:text-base text-gray-700 dark:text-gray-200">
-            {notableNumbers || <span className="opacity-50">No notable numbers.</span>}
-          </span>
-        </div>
-        <div className="flex items-start gap-2 min-h-[28px]">
-          <HiOutlineLightBulb className="mt-0.5 text-gray-500 dark:text-gray-300" size={22} />
-          <span className="text-sm md:text-base text-gray-700 dark:text-gray-200">
-            {uniqueInsight || <span className="opacity-50">No unique insight.</span>}
-          </span>
-        </div>
-      </div>
+      
     </div>
   );
 }

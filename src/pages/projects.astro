@@ -1,15 +1,55 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProjectCard from "../components/react/ProjectCard.tsx";
-
 import projects from "../content/projects/projects.json";
+import { Github, GithubIcon } from "lucide-react";
+
+/** @type {{[key: string]: any[]}} */
+let categories = Object.create(null);
+for (let i = 0; i < projects.length; i++) {
+  const project = projects[i];
+  const cat = project.category && project.category.trim() ? project.category : 'Uncategorized';
+  if (!categories[cat]) categories[cat] = [];
+  categories[cat].push(project);
+}
 ---
 
 <Layout title="Projects">
-  <h1 class="text-2xl font-bold text-center my-8">Projects</h1>
-  <main
-    class="w-full max-w-5xl mx-auto grid  sm:grid-cols-2 lg:grid-cols-3 gap-3 px-2 md:px-4 py-4 justify-center"
-  >
-    {projects.map((project) => <ProjectCard {...project} />)}
+  <main class="flex flex-col items-center justify-center w-full flex-1 p-2 pt-20 text-center">
+    <div class="flex flex-col items-center w-full max-w-3xl">
+      <h1 class="text-3xl font-bold mb-8">Projects</h1>
+      {Object.entries(categories).map(([cat, projs]) => {
+        const arr = projs;
+        return (
+          (arr && (arr as any[]).length > 0) && (
+            <section class="w-full mb-8">
+              <h2 class="text-xl font-bold mb-4 text-left text-blue-300">{cat}</h2>
+              {(arr as any[]).map((project) => (
+                <p class="mb-4 text-left">
+                  {project.live || project.github ? (
+                    <a
+                      href={project.live ? project.live : project.github}
+                      class={`font-semibold ${
+                        project.live
+                          ? "text-purple-400 hover:text-purple-400"
+                          : "text-yellow-400 hover:text-yellow-400"
+                      } hover:underline inline-flex items-center gap-1`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {project.title}
+                      <svg xmlns="http://www.w3.org/2000/svg" class="inline h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7h-6m6 0v6" /></svg>
+                    </a>
+                  ) : (
+                    <span class="font-semibold text-blue-300">{project.title}</span>
+                  )}
+                  : {project.description}
+                 
+                </p>
+              ))}
+            </section>
+          )
+        );
+      })}
+    </div>
   </main>
 </Layout>

@@ -1,33 +1,53 @@
 [
   {
     "index": 9,
-    "title": "Agent-Nexus-Protocol",
-    "description": "ANP - Agent Nexus Protocol.",
-    "github": "https://github.com/Shubham-Rasal/Agent-Nexus-Protocol",
+    "title": "Settle",
+    "description": "Universal USDC payment gateway for merchants. Accept on any chain, settle wherever you want.",
+    "github": "https://github.com/Shubham-Rasal/Settle",
+    "live": "https://settle.capital/",
     "active": true,
-    "notableNumbers": "Early stage.",
-    "uniqueInsight": "Protocol for agent communication.",
-    "shortSummary": "Protocol for agent-based systems."
+    "category": "web3"
   },
   {
     "index": 10,
-    "title": "otakuverse",
-    "description": "A anime translation platform.",
-    "github": "https://github.com/Shubham-Rasal/otakuverse",
+    "title": "Agent-Nexus-Protocol",
+    "description": "ANP - Agent Nexus Protocol.",
+    "github": "https://github.com/Shubham-Rasal/Agent-Nexus-Protocol",
+    "live": "https://agent-nexus-protocol.vercel.app/",
     "active": true,
-    "notableNumbers": "Early stage.",
-    "uniqueInsight": "THe model is trained using decentralised GPU Infra.",
-    "shortSummary": "Platform for anime fans."
+    "category": ""
   },
   {
     "index": 11,
+    "title": "Groundline",
+    "description": "A graphDB with persistance on IPFS.",
+    "github": "https://github.com/Shubham-Rasal/Agent-Nexus-Protocol/tree/master/groundline",
+    "active": true,
+    "category": "library"
+  },
+  {
+    "index": 12,
+    "title": "KrishiAI",
+    "description": "An app for farmers in India",
+    "github": "https://github.com/Shubham-Rasal/KrishiAI",
+    "active": true,
+    "category": "app"
+  },
+  {
+    "index": 13,
+    "title": "otakuverse",
+    "description": "A anime translation platform.",
+    "github": "https://github.com/Shubham-Rasal/otakuverse",
+    "active": false,
+    "category": "fullstack"
+  },
+  {
+    "index": 14,
     "title": "HashMind",
     "description": "Decentralized Marketplace for crowd-sourced AI-agents for literally anything.",
     "github": "https://github.com/Shubham-Rasal/HashMind",
-    "active": true,
-    "notableNumbers": "Won multiple bounties in ETHGlobal hackathon.",
-    "uniqueInsight": "Crowd-sourced AI agents.",
-    "shortSummary": "Decentralized AI agent marketplace."
+    "active": false,
+    "category": "web3"
   },
   {
     "index": 4,
@@ -35,10 +55,8 @@
     "description": "Multiplayer Doodle Game.",
     "live": "https://dgame.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/wec22-multiplayer-game",
-    "active": true,
-    "notableNumbers": "100+ active users.",
-    "uniqueInsight": "Real-time doodle recognition.",
-    "shortSummary": "A fun multiplayer doodle game."
+    "active": false,
+    "category": "fullstack"
   },
   {
     "index": 1,
@@ -47,9 +65,7 @@
     "live": "https://harveeco.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
     "active": false,
-    "notableNumbers": "100+ farmers onboarded.",
-    "uniqueInsight": "Decentralized data sharing.",
-    "shortSummary": "Farmers' data DAO platform."
+    "category": ""
   },
   {
     "index": 2,
@@ -58,9 +74,7 @@
     "live": "https://deano.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
     "active": false,
-    "notableNumbers": "5+ datasets annotated.",
-    "uniqueInsight": "Blockchain-based annotation.",
-    "shortSummary": "Decentralized annotation network where users can annotate datasets and earn rewards."
+    "category": ""
   },
   {
     "index": 3,
@@ -69,9 +83,7 @@
     "live": "https://app.supademo.com/demo/2XthgTOFVJYIYPVHqjCtK",
     "github": "https://github.com/Shubham-Rasal/Mindful-AI",
     "active": false,
-    "notableNumbers": "Early stage.",
-    "uniqueInsight": "AI-based mental health screening for college students.",
-    "shortSummary": "Detects mental illness using ensemble models."
+    "category": "ai"
   },
   {
     "index": 7,
@@ -80,9 +92,7 @@
     "live": "https://ethglobal.com/showcase/ciphercraft-3g8kp",
     "github": "https://github.com/Shubham-Rasal/CipherCraft",
     "active": false,
-    "notableNumbers": "5 federated models trained.",
-    "uniqueInsight": "Access-controlled federated learning.",
-    "shortSummary": "Federated model training hub."
+    "category": ""
   },
   {
     "index": 8,
@@ -91,8 +101,6 @@
     "live": "https://smeasy.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/SMEasy",
     "active": false,
-    "notableNumbers": "Recommends more that 100+ government schemes.",
-    "uniqueInsight": "AI-driven scheme matching.",
-    "shortSummary": "Govt scheme & loan recommender."
+    "category": "ai"
   }
 ]
