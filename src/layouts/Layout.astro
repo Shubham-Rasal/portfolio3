@@ -21,8 +21,8 @@ const { title } = Astro.props;
     <link
       rel="alternate"
       type="application/rss+xml"
-      title="RSS Feed for My Website"
-      href="rss.xml"
+      title="Shubham Rasal - Portfolio & Blog RSS Feed"
+      href={new URL("rss.xml", Astro.site)}
     />
     <meta name="generator" content={Astro.generator} />
 

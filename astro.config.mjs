@@ -13,6 +13,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://shubhamrasal.com', // Replace with your actual domain
   integrations: [tailwind(), react(), mdx()],
   output: 'static',
 
