@@ -27,6 +27,14 @@
   },
   {
     "index": 12,
+    "title": "Autocomplete",
+    "description": "A React-based AI-powered code editor component with intelligent code suggestions.",
+    "github": "https://www.npmjs.com/package/@shubhamrasal/autocomplete",
+    "active": true,
+    "category": "library"
+  },
+  {
+    "index": 13,
     "title": "KrishiAI",
     "description": "An app for farmers in India",
     "github": "https://github.com/Shubham-Rasal/KrishiAI",
@@ -40,14 +48,6 @@
     "github": "https://github.com/Shubham-Rasal/otakuverse",
     "active": false,
     "category": "fullstack"
-  },
-  {
-    "index": 14,
-    "title": "HashMind",
-    "description": "Decentralized Marketplace for crowd-sourced AI-agents for literally anything.",
-    "github": "https://github.com/Shubham-Rasal/HashMind",
-    "active": false,
-    "category": "web3"
   },
   {
     "index": 4,
@@ -77,15 +77,6 @@
     "category": ""
   },
   {
-    "index": 3,
-    "title": "Mindful AI",
-    "description": "Mental Illness Detection using AI.",
-    "live": "https://app.supademo.com/demo/2XthgTOFVJYIYPVHqjCtK",
-    "github": "https://github.com/Shubham-Rasal/Mindful-AI",
-    "active": false,
-    "category": "ai"
-  },
-  {
     "index": 7,
     "title": "CipherCraft",
     "description": "A Decentralised Hub for federated model training on access controlled private datasets.",
@@ -93,14 +84,5 @@
     "github": "https://github.com/Shubham-Rasal/CipherCraft",
     "active": false,
     "category": ""
-  },
-  {
-    "index": 8,
-    "title": "SMEasy",
-    "description": "Automatic Government Scheme Recommendation and AI based Loan Approval",
-    "live": "https://smeasy.vercel.app/",
-    "github": "https://github.com/Shubham-Rasal/SMEasy",
-    "active": false,
-    "category": "ai"
   }
 ]

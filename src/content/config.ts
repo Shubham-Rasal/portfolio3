@@ -21,9 +21,25 @@ const interactiveBlogCollection = defineCollection({
     }),
 });
 
+const readingListCollection = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/content/reading" }),
+    schema: z.object({
+        title: z.string(),
+        url: z.string().url(),
+        description: z.string().optional(),
+        tags: z.array(z.string()),
+        status: z.enum(["read", "reading", "to-read"]),
+        addedDate: z.date(),
+        notes: z.string().optional(),
+        author: z.string().optional(),
+        site: z.string().optional()
+    }),
+});
+
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   blog: blogCollection,
-  interactiveBlog: interactiveBlogCollection
+  interactiveBlog: interactiveBlogCollection,
+  reading: readingListCollection
 };
