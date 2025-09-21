@@ -283,13 +283,12 @@ Covers:
 We are also actively working on the landing page and other aspects of the product to make it the best in class.
 
 ---
-- Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/)  
+
 ## 🔗 Resources
 
 - Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/)  
 - GitHub repo: [Khoj](https://github.com/ayush4345/Khoj)     
 
----
 
-That’s the progress so far 🚀.  
-If you’d like to try Khoj or give feedback, hop into a hunt and let us know your thoughts!  
+
+That’s the progress so far 🚀. If you’d like to try Khoj or give feedback, hop into a hunt and let us know your thoughts!  
