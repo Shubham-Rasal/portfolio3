@@ -220,7 +220,7 @@ Covers:
 We are also actively working on the landing page and other aspects of the product to make it the best in class.
 
 ---
-
+- Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/)  
 ## 🔗 Resources
 - Live app: [Khoj Alpha](https://khoj-app.netlify.app/)  
 - GitHub repo: [Khoj](https://github.com/ayush4345/Khoj)     
