@@ -117,9 +117,9 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 ---
 
-### 3. LLM Upgrade: Claude → Gemini Flash
+### 3. LLM Upgrade: Claude → Gemini 2.5
 
-- Migrated clue generation from Claude to **Gemini Flash**.
+- Migrated clue generation from Claude to **Gemini 2.5**.
 - Benefits:  
   - Structured outputs, easier parsing.  
   - Reduced prompt-to-clue parsing errors.  
