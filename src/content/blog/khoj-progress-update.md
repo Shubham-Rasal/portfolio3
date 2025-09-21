@@ -200,7 +200,7 @@ We also pushed several smaller but important updates:
 ---
 
 ## 📖 Product Guide
-We’ve also added a **full product guide** with screenshots and step-by-step instructions:  
+👉 [Read it here](https://github.com/ayush4345/Khoj/wiki/Product-Guide)  
 
 👉 [Read it here](https://github.com/ayush4345/Khoj/wiki/Product-Guide)  
 
