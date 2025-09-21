@@ -22,7 +22,9 @@ This milestone focuses on making Khoj more robust, secure, and fun — while sta
 
 ### 1. Accurate Distance Algorithm
 - Replaced the earlier naive distance logic with the `haversineDistance` algorithm for precise geolocation checks.
-- Reduces error margins for location validation, ensuring fairer gameplay.
+- Reduces error margins for location validation, with a **sub-10m accuracy**, ensuring fairer gameplay.
+- We also noticed that mobile phone browsers use the native GPS sensor. This leads to better user location coordinates. Since, Khoj is mobile-first, coordinates received from phones with precise location turned on, lead to much better results.
+
 - [PR #36](https://github.com/ayush4345/Khoj/pull/36)  
 
 ---
