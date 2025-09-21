@@ -146,7 +146,9 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 - A **full UI for hunt creation** now replaces the Remix IDE workflow.  
 - Creators can configure all parameters:  
   - Hunt name, description, timeline  
-  - Teams toggle + max team size  
+  - Clues (encrypted via Lit + uploaded to IPFS) 
+  - Users can now pass a theme for the hunt which is adhered to while generating clues.
+  
   - Custom NFT image  
   - Clues (encrypted via Lit + uploaded to IPFS)  
 - Smooth wallet integration powered by **ThirdWeb**.  
