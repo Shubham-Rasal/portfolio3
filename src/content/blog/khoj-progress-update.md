@@ -69,7 +69,7 @@ uint256 public nextTeamId;
 Validation checks:
 
 1. Invite not expired (`block.timestamp <= expiry`).
-2. User not already in team.
+2. User not already in current team or any other team for the given hunt.
 3. Team not full (`memberCount < maxMembers`).
 4. Signature must match the team owner:
     - Hash: `keccak256("TeamInvite", teamId, expiry, chainId, address(this))`
