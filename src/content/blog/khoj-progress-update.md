@@ -8,12 +8,15 @@ tags:
   - devlog
   - web3
 ---
-Khoj is our platform for **AI-powered, location-based treasure hunts**. Players solve riddles, visit physical locations, and earn onchain rewards. Each user receives a unique NFT upon registration, and completing hunts grants rewards recorded on-chain.  
+Khoj is our platform for **AI-powered, location-based treasure hunts**.
+
+Players solve riddles, visit physical locations, and earn onchain rewards. Each user receives a unique NFT upon registration, and completing hunts grants rewards recorded on-chain.  
 
 Since our MVP at **ETHIndia '24**, we’ve significantly improved usability, stability, and the overall experience.  
+
 This milestone focuses on making Khoj more robust, secure, and fun — while staying true to our mission of building a **Web2-native experience that seamlessly onboards users to Web3**.
 
----
+
 
 ## 🚀 Major Updates
 
@@ -22,20 +25,18 @@ This milestone focuses on making Khoj more robust, secure, and fun — while sta
 - Reduces error margins for location validation, ensuring fairer gameplay.
 - [PR #36](https://github.com/ayush4345/Khoj/pull/36)  
 
-
 ---
 
 ### 2. On-chain Hunt Winners
 - Winners are now tracked **on-chain**, and are finalised when a hunt ends.
-- [PR link]
+- [PR #37](https://github.com/ayush4345/Khoj/pull/37)
 
 ---
 ### 3. Teams: Secure, Decentralized, and User-Friendly
 
 One of the most requested features during our pilot hunts was **support for teams**. Designing this was far from trivial:  
-- The original Khoj design assumed solo-only hunts.  
-- We needed a way to let users **form teams securely**, without central storage, and without exposing sensitive invite codes on-chain.  
-- The final flow had to balance **security, decentralization, and user experience**.
+
+The original Khoj design assumed solo-only hunts.We needed a way to let users **form teams securely**, without central storage, and without exposing sensitive invite codes on-chain.The final flow had to balance **security, decentralization, and user experience**.
 
 After several iterations, here’s the final architecture we built:
 
@@ -113,8 +114,9 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 - Contract validates and admits user if rules are satisfied.
 
 👉 Detailed implementation: [PR #59](https://github.com/ayush4345/Khoj/pull/59)
-![[Pasted image 20250921225216.png]]
-![[Pasted image 20250921225202.png]]
+
+
+![khoj_teams](khoj_team_joining.png)
 
 ---
 
@@ -147,7 +149,7 @@ The frontend handles **user interaction, invite generation, and QR code manageme
   - Clues (encrypted via Lit + uploaded to IPFS)  
 - Smooth wallet integration powered by **ThirdWeb**.  
 
-![[Pasted image 20250921225517.png]]
+![khoj_hunt_creation](khoj_hunt_creation.png)
 
 ---
 
@@ -156,7 +158,7 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 - Integrated **ThirdWeb wallet**, allowing both **Web3 wallets and Web2 social login (Google, etc.)**.  This significantly improves the user experience of our target audience.
 - This aligns with our focus on **Web2-native UX → Web3 rewards**.
 
-![[Pasted image 20250921225527.png]]
+![khoj_wallet_integration](khoj_wallet_integration.png)
 
 ---
 
@@ -196,7 +198,7 @@ We also pushed several smaller but important updates:
 ## 📖 Product Guide
 We’ve also added a **full product guide** with screenshots and step-by-step instructions:  
 
-👉 [Read it here](https://khoj-app.netlify.app/)  
+👉 [Read it here](https://github.com/ayush4345/Khoj/wiki/Product-Guide)  
 
 Covers:  
 - Hunt creation  
@@ -219,10 +221,7 @@ We are also actively working on the landing page and other aspects of the produc
 
 ## 🔗 Resources
 - Live app: [Khoj Alpha](https://khoj-app.netlify.app/)  
-- GitHub repo: [Khoj](https://github.com/ayush4345/Khoj)  
-- Example PRs: [Distance Algo #36](https://github.com/ayush4345/Khoj/pull/36), [Teams #59](https://github.com/ayush4345/Khoj/pull/59)  
-- Product guide screenshots: <>  
-- Demo video: <>  
+- GitHub repo: [Khoj](https://github.com/ayush4345/Khoj)     
 
 ---
 
