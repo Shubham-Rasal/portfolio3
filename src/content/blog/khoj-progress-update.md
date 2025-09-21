@@ -193,7 +193,15 @@ Live link: [khoj-alpha.netlify.app](https://khoj-app.netlify.app/)
 
 We also pushed several smaller but important updates:
 - Environment variable cleanup (safer, more configurable deployments).  
-- Improved error handling and UX flow for retries.  
+- Removed unnecessary logic that caused fragility. 
+- Improved the Hunts page UI with a start and end date, pill for whether teams are enabled or not and the number of participants. 
+- Introduced 3 new states for the frontend buttons: `Register`, `Manage` and `Ended`.
+- Added the Khoj logo and updated the favicon.
+- Added a custom loading screen while fetching data from the contract / backend. 
+- Standardised UI across the Hunt Details, Clue and Hunt End pages.
+- Moved all frontend type definitions to a separate directory following principles of DRY.
+- Support PassetHub.
+- Rename the contracts to `Khoj` and `KhojNFT` for consistency. 
 - Added product guide for easier onboarding.  
 - Removed unnecessary logic that caused fragility.  
 
