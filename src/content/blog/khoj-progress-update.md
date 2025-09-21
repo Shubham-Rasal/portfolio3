@@ -78,6 +78,22 @@ This ensures only legitimate invites signed by the team owner are accepted.
 
 The frontend handles **user interaction, invite generation, and QR code management**, all without relying on a centralized backend.
 
+<table align="center">
+<tr>
+<td align="center">
+<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/67f8fbe3-2d33-4528-861f-e39627c1afe5" />
+<br>
+<sub><i>Creating a team</i></sub>
+</td>
+<td align="center">
+<img width="200" alt="Team invite code & QR" src="https://github.com/user-attachments/assets/0d40e077-7dee-4c80-91b5-2fc7e1eb4c2b" />
+<br>
+<sub><i>Team invite code & QR</i></sub>
+</td>
+</tr>
+</table>
+
+
 ##### A. Registration
 
 - User connects with **ThirdWeb wallet** (can be Web3 wallet or Google/social login).
@@ -112,8 +128,21 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 👉 Detailed implementation: [PR #59](https://github.com/ayush4345/Khoj/pull/59)
 
+<table align="center">
+<tr>
+<td align="center">
+<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/6862e124-d88b-45e9-a030-8eab604244a8" />
+<br>
+<sub><i>Joining a team</i></sub>
+</td>
+<td align="center">
+<img width="200" alt="Team Details" src="https://github.com/user-attachments/assets/24d8327a-e1b5-4a90-b4a6-c4cb55670283" />
+<br>
+<sub><i>Team details after joining a team</i></sub>
+</td>
+</tr>
+</table>
 
-![khoj_teams](khoj_team_joining.png)
 
 ---
 
@@ -178,7 +207,7 @@ Note: Lit seems to have a lot of reliability issues and we are considering migra
 - Cleaned up legacy code → removed hardcoded values across flow.  
 - Backend deployed on **OCI**, frontend on **Netlify**, making Khoj fully live and testable.  
 
-Live link: [khoj-alpha.netlify.app](https://khoj-app.netlify.app/)  
+Live link: [khoj-alpha.netlify.app](https://khoj-alpha.netlify.app/)  
 
 ---
 
@@ -189,6 +218,45 @@ We also pushed several smaller but important updates:
 - Improved error handling and UX flow for retries.  
 - Added product guide for easier onboarding.  
 - Removed unnecessary logic that caused fragility.  
+- Improved the Hunts page UI with a start and end date, pill for whether teams are enabled or not and the number of participants. 
+- Introduced 3 new states for the frontend buttons: `Register`, `Manage` and `Ended`.
+
+<table align="center">
+<tr>
+<td align="center">
+<img width="200" alt="Hunts" src="https://github.com/user-attachments/assets/b496a077-79d8-406b-bbb1-197ead114b75" />
+<br>
+<sub><i>Discover Hunts</i></sub>
+</td>
+<td align="center">
+<img src="https://github.com/user-attachments/assets/03c124d4-5a38-4469-b909-191e9a282c7d" width="200"><br>
+<sub><i>Hunt States</i></sub>
+</td>
+</tr>
+</table>
+
+- Added the Khoj logo and updated the favicon.
+- Added a custom loading screen while fetching data from the contract / backend. 
+- Standardised UI across the Hunt Details, Clue and Hunt End pages.
+
+<table align="center">
+<tr>
+<td align="center">
+<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/fd971fb3-c23f-44ed-99ad-1a8235fa577c" />
+<br>
+<sub><i>Solving a Clue</i></sub>
+</td>
+<td align="center">
+<img width="200" alt="Team Details" src="https://github.com/user-attachments/assets/1c3bdad1-b913-495f-a009-fdf998fd65193" />
+<br>
+<sub><i>Successful completion of a hunt</i></sub>
+</td>
+</tr>
+</table>
+
+- Moved all frontend type definitions to a separate directory following principles of DRY.
+- Support PassetHub.
+- Rename the contracts to `Khoj` and `KhojNFT` for consistency. 
 
 ---
 
@@ -218,7 +286,7 @@ We are also actively working on the landing page and other aspects of the produc
 - Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/)  
 ## 🔗 Resources
 
-- Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/  
+- Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/)  
 - GitHub repo: [Khoj](https://github.com/ayush4345/Khoj)     
 
 ---
