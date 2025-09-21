@@ -1,7 +1,7 @@
 ---
 title: Khoj Progress Update
 slug: khoj-progress-update
-date: 2025-06-06
+date: 2025-09-21
 author: Shubham Rasal
 tags:
   - ai
