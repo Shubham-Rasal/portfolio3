@@ -16,6 +16,9 @@ Since our MVP at **ETHIndia '24**, we’ve significantly improved usability, sta
 
 This milestone focuses on making Khoj more robust, secure, and fun — while staying true to our mission of building a **Web2-native experience that seamlessly onboards users to Web3**.
 
+## New Architecture
+
+![Khoj Architecture](khoj_arch.png)
 
 
 ## 🚀 Major Updates
