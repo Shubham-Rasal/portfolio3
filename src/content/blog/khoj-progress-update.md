@@ -27,14 +27,9 @@ This milestone focuses on making Khoj more robust, secure, and fun — while sta
 
 - [PR #36](https://github.com/ayush4345/Khoj/pull/36)  
 
----
-
-### 2. On-chain Hunt Winners
-- Winners are now tracked **on-chain**, and are finalised when a hunt ends.
-- [PR #37](https://github.com/ayush4345/Khoj/pull/37)
 
 ---
-### 3. Teams: Secure, Decentralized, and User-Friendly
+### 2. Teams: Secure, Decentralized, and User-Friendly
 
 One of the most requested features during our pilot hunts was **support for teams**. Designing this was far from trivial:  
 
@@ -69,7 +64,7 @@ uint256 public nextTeamId;
 Validation checks:
 
 1. Invite not expired (`block.timestamp <= expiry`).
-2. User not already in current team or any other team for the given hunt.
+2. User not already in team.
 3. Team not full (`memberCount < maxMembers`).
 4. Signature must match the team owner:
     - Hash: `keccak256("TeamInvite", teamId, expiry, chainId, address(this))`
@@ -122,7 +117,7 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 ---
 
-### 4. LLM Upgrade: Claude → Gemini Flash
+### 3. LLM Upgrade: Claude → Gemini Flash
 
 - Migrated clue generation from Claude to **Gemini Flash**.
 - Benefits:  
@@ -133,7 +128,7 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 ---
 
-### 5. Custom NFT Images for Hunts
+### 4. Custom NFT Images for Hunts
 
 - Hunt creators can now upload **custom images**.  
 - Earlier, all hunts used the same default NFT art.  
@@ -141,14 +136,12 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 ---
 
-### 6. Hunt Creation UI
+### 5. Hunt Creation UI
 
 - A **full UI for hunt creation** now replaces the Remix IDE workflow.  
 - Creators can configure all parameters:  
   - Hunt name, description, timeline  
-  - Clues (encrypted via Lit + uploaded to IPFS) 
-  - Users can now pass a theme for the hunt which is adhered to while generating clues.
-  
+  - Teams toggle + max team size  
   - Custom NFT image  
   - Clues (encrypted via Lit + uploaded to IPFS)  
 - Smooth wallet integration powered by **ThirdWeb**.  
@@ -157,7 +150,7 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 ---
 
-### 7. Wallet & Onboarding
+### 6. Wallet & Onboarding
 
 - Integrated **ThirdWeb wallet**, allowing both **Web3 wallets and Web2 social login (Google, etc.)**.  This significantly improves the user experience of our target audience.
 - This aligns with our focus on **Web2-native UX → Web3 rewards**.
@@ -166,7 +159,7 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 ---
 
-### 8. Lit Protocol + IPFS Migration
+### 7. Lit Protocol + IPFS Migration
 
 - Moved encrypted clue  storage from Walrus to **Lit Protocol + IPFS (Pinata)**.
 - Challenges solved:  
@@ -178,7 +171,7 @@ Note: Lit seems to have a lot of reliability issues and we are considering migra
 
 ---
 
-### 9. Backend Stability & Testing
+### 8. Backend Stability & Testing
 
 - Built an **extensive test suite** for smart contracts to handle edge cases and prevent regressions.  
 - Added retry mechanisms for clue verification & clue decryption.  
@@ -189,26 +182,18 @@ Live link: [khoj-alpha.netlify.app](https://khoj-app.netlify.app/)
 
 ---
 
-### 10. Miscellaneous Improvements
+### 9. Miscellaneous Improvements
 
 We also pushed several smaller but important updates:
 - Environment variable cleanup (safer, more configurable deployments).  
-- Removed unnecessary logic that caused fragility. 
-- Improved the Hunts page UI with a start and end date, pill for whether teams are enabled or not and the number of participants. 
-- Introduced 3 new states for the frontend buttons: `Register`, `Manage` and `Ended`.
-- Added the Khoj logo and updated the favicon.
-- Added a custom loading screen while fetching data from the contract / backend. 
-- Standardised UI across the Hunt Details, Clue and Hunt End pages.
-- Moved all frontend type definitions to a separate directory following principles of DRY.
-- Support PassetHub.
-- Rename the contracts to `Khoj` and `KhojNFT` for consistency. 
+- Improved error handling and UX flow for retries.  
 - Added product guide for easier onboarding.  
 - Removed unnecessary logic that caused fragility.  
 
 ---
 
 ## 📖 Product Guide
-👉 [Read it here](https://github.com/ayush4345/Khoj/wiki/Product-Guide)  
+We’ve also added a **full product guide** with screenshots and step-by-step instructions:  
 
 👉 [Read it here](https://github.com/ayush4345/Khoj/wiki/Product-Guide)  
 
@@ -232,6 +217,8 @@ We are also actively working on the landing page and other aspects of the produc
 ---
 - Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/)  
 ## 🔗 Resources
+
+- Live app: [Khoj Alpha](https://khoj-alpha.netlify.app/  
 - GitHub repo: [Khoj](https://github.com/ayush4345/Khoj)     
 
 ---
