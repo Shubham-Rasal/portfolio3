@@ -84,12 +84,12 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 <table align="center">
 <tr>
 <td align="center">
-<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/67f8fbe3-2d33-4528-861f-e39627c1afe5" />
+<img width="200" alt="Creating a team" src="khoj_creating_team.png" />
 <br>
 <sub><i>Creating a team</i></sub>
 </td>
 <td align="center">
-<img width="200" alt="Team invite code & QR" src="https://github.com/user-attachments/assets/0d40e077-7dee-4c80-91b5-2fc7e1eb4c2b" />
+<img width="200" alt="Team invite code & QR" src="khoj_team_invite_qr.png" />
 <br>
 <sub><i>Team invite code & QR</i></sub>
 </td>
@@ -134,12 +134,12 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 <table align="center">
 <tr>
 <td align="center">
-<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/6862e124-d88b-45e9-a030-8eab604244a8" />
+<img width="200" alt="Joining a team" src="khoj_joining_team.png" />
 <br>
 <sub><i>Joining a team</i></sub>
 </td>
 <td align="center">
-<img width="200" alt="Team Details" src="https://github.com/user-attachments/assets/24d8327a-e1b5-4a90-b4a6-c4cb55670283" />
+<img width="200" alt="Team Details" src="khoj_team_details.png" />
 <br>
 <sub><i>Team details after joining a team</i></sub>
 </td>
@@ -227,12 +227,12 @@ We also pushed several smaller but important updates:
 <table align="center">
 <tr>
 <td align="center">
-<img width="200" alt="Hunts" src="https://github.com/user-attachments/assets/b496a077-79d8-406b-bbb1-197ead114b75" />
+<img width="200" alt="Hunts" src="khoj_discover_hunts.png" />
 <br>
 <sub><i>Discover Hunts</i></sub>
 </td>
 <td align="center">
-<img src="https://github.com/user-attachments/assets/03c124d4-5a38-4469-b909-191e9a282c7d" width="200"><br>
+<img src="khoj_hunt_states.png" width="200"><br>
 <sub><i>Hunt States</i></sub>
 </td>
 </tr>
@@ -245,12 +245,12 @@ We also pushed several smaller but important updates:
 <table align="center">
 <tr>
 <td align="center">
-<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/fd971fb3-c23f-44ed-99ad-1a8235fa577c" />
+<img width="200" alt="Solving a Clue" src="khoj_solving_clue.png" />
 <br>
 <sub><i>Solving a Clue</i></sub>
 </td>
 <td align="center">
-<img width="200" alt="Team Details" src="https://github.com/user-attachments/assets/1c3bdad1-b913-495f-a009-fdf998fd65193" />
+<img width="200" alt="Successful completion of a hunt" src="khoj_hunt_completion.png" />
 <br>
 <sub><i>Successful completion of a hunt</i></sub>
 </td>
