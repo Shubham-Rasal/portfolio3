@@ -81,20 +81,11 @@ This ensures only legitimate invites signed by the team owner are accepted.
 
 The frontend handles **user interaction, invite generation, and QR code management**, all without relying on a centralized backend.
 
-<table align="center">
-<tr>
-<td align="center">
-<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/67f8fbe3-2d33-4528-861f-e39627c1afe5" />
-<br>
-<sub><i>Creating a team</i></sub>
-</td>
-<td align="center">
-<img width="200" alt="Team invite code & QR" src="https://github.com/user-attachments/assets/0d40e077-7dee-4c80-91b5-2fc7e1eb4c2b" />
-<br>
-<sub><i>Team invite code & QR</i></sub>
-</td>
-</tr>
-</table>
+![Creating a team](khoj_creating_team.png)
+*Creating a team*
+
+![Team invite code & QR](khoj_team_invite_qr.png)
+*Team invite code & QR*
 
 
 ##### A. Registration
@@ -131,20 +122,11 @@ The frontend handles **user interaction, invite generation, and QR code manageme
 
 👉 Detailed implementation: [PR #59](https://github.com/ayush4345/Khoj/pull/59)
 
-<table align="center">
-<tr>
-<td align="center">
-<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/6862e124-d88b-45e9-a030-8eab604244a8" />
-<br>
-<sub><i>Joining a team</i></sub>
-</td>
-<td align="center">
-<img width="200" alt="Team Details" src="https://github.com/user-attachments/assets/24d8327a-e1b5-4a90-b4a6-c4cb55670283" />
-<br>
-<sub><i>Team details after joining a team</i></sub>
-</td>
-</tr>
-</table>
+![Joining a team](khoj_joining_team.png)
+*Joining a team*
+
+![Team Details](khoj_team_details.png)
+*Team details after joining a team*
 
 
 ---
@@ -224,38 +206,21 @@ We also pushed several smaller but important updates:
 - Improved the Hunts page UI with a start and end date, pill for whether teams are enabled or not and the number of participants. 
 - Introduced 3 new states for the frontend buttons: `Register`, `Manage` and `Ended`.
 
-<table align="center">
-<tr>
-<td align="center">
-<img width="200" alt="Hunts" src="https://github.com/user-attachments/assets/b496a077-79d8-406b-bbb1-197ead114b75" />
-<br>
-<sub><i>Discover Hunts</i></sub>
-</td>
-<td align="center">
-<img src="https://github.com/user-attachments/assets/03c124d4-5a38-4469-b909-191e9a282c7d" width="200"><br>
-<sub><i>Hunt States</i></sub>
-</td>
-</tr>
-</table>
+![Hunts](khoj_discover_hunts.png)
+*Discover Hunts*
+
+![Hunt States](khoj_hunt_states.png)
+*Hunt States*
 
 - Added the Khoj logo and updated the favicon.
 - Added a custom loading screen while fetching data from the contract / backend. 
 - Standardised UI across the Hunt Details, Clue and Hunt End pages.
 
-<table align="center">
-<tr>
-<td align="center">
-<img width="200" alt="Creating a team" src="https://github.com/user-attachments/assets/fd971fb3-c23f-44ed-99ad-1a8235fa577c" />
-<br>
-<sub><i>Solving a Clue</i></sub>
-</td>
-<td align="center">
-<img width="200" alt="Team Details" src="https://github.com/user-attachments/assets/1c3bdad1-b913-495f-a009-fdf998fd65193" />
-<br>
-<sub><i>Successful completion of a hunt</i></sub>
-</td>
-</tr>
-</table>
+![Solving a Clue](khoj_solving_clue.png)
+*Solving a Clue*
+
+![Successful completion of a hunt](khoj_hunt_completion.png)
+*Successful completion of a hunt*
 
 - Moved all frontend type definitions to a separate directory following principles of DRY.
 - Support PassetHub.
