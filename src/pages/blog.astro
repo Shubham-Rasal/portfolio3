@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 import { getCollection } from "astro:content";
+import { extractExcerpt } from "../utils/excerpt";
 
 // Get all entries from a collection.
 // Requires the name of the collection as an argument.
@@ -9,6 +10,7 @@ import { getCollection } from "astro:content";
 interface BlogPost {
   slug?: string;
   id?: string; // Optional for interactive blog posts
+  body?: string; // Add body content for excerpts - optional as it might be undefined
   data: {
     title: string;
     date: Date;
@@ -32,13 +34,18 @@ console.log(allBlogPosts.length)
     {
       allPosts.map((post) => (
         <a href={`/writing/${post.slug || post.id}`} class="no-underline">
-          <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col md:flex-row text-gray-800">
-            <h2 class="inline-flex text-gray-600 dark:text-gray-400">
-              <span>{post.data.title}</span>
-            </h2>
-            <div class="md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40">
-              {post.data.date.toLocaleDateString()}
+          <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col text-gray-800">
+            <div class="flex flex-col md:flex-row md:items-center">
+              <h2 class="inline-flex text-gray-700 dark:text-gray-200">
+                <span>{post.data.title}</span>
+              </h2>
+              <div class="md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40">
+                {post.data.date.toLocaleDateString()}
+              </div>
             </div>
+            <p class="text-gray-500 dark:text-gray-500 text-sm mt-2 leading-relaxed">
+              {extractExcerpt(post.body || '', 120)}
+            </p>
           </article>
         </a>
       ))
