@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 
 import { getCollection } from "astro:content";
 import { extractExcerpt } from "../utils/excerpt";
+import { formatDate } from "../utils/dateFormat";
 
 // Get all entries from a collection.
 // Requires the name of the collection as an argument.
@@ -40,7 +41,7 @@ console.log(allBlogPosts.length)
                 <span>{post.data.title}</span>
               </h2>
               <div class="md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40">
-                {post.data.date.toLocaleDateString()}
+                {formatDate(post.data.date)}
               </div>
             </div>
             <p class="text-gray-500 dark:text-gray-500 text-sm mt-2 leading-relaxed">

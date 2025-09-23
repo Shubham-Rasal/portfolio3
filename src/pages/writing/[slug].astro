@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { render } from "astro:content";
 import { getEntry } from "astro:content";
+import { formatDateMedium } from "../../utils/dateFormat";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
@@ -20,14 +21,6 @@ export async function getStaticPaths() {
     params: { slug: entry.id },
     props: { entry },
   }));
-}
-
-function formatDate(date: Date) {
-  const d = new Date(date);
-  const res = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "medium",
-  }).format(d);
-  return res;
 }
 
 // 2. For your template, you can get the entry directly from the prop
@@ -56,7 +49,7 @@ const { Content } = await render(post);
         {entry.data.title}
       </h1>
       <p class="text-gray-600">
-        {formatDate(entry.data.date)}
+        {formatDateMedium(entry.data.date)}
       </p>
 
       <p class="text-gray-600">
