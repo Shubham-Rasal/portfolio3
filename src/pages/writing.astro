@@ -35,9 +35,9 @@ console.log(allBlogPosts.length)
     {
       allPosts.map((post) => (
         <a href={`/writing/${post.slug || post.id}`} class="no-underline">
-          <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col text-gray-800">
+          <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col text-gray-200">
             <div class="flex flex-col md:flex-row md:items-center">
-              <h2 class="inline-flex text-gray-700 dark:text-gray-200">
+              <h2 class="inline-flex text-gray-300 dark:text-gray-200">
                 <span>{post.data.title}</span>
               </h2>
               <div class="md:pl-2 md:ml-auto font-normal opacity-60 dark:opacity-40">

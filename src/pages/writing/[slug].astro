@@ -37,11 +37,11 @@ const { Content } = await render(post);
   <article
     class="px-6 sm:px-6 py-2 sm:py-16 lg:py-12 mx-auto max-w-4xl text-lg text-slate-300"
   >
-    <button class="my-8 py-8 flex text-slate-800 dark:text-slate-300">
-      <a href="/blog"> &larr; Back to blog</a>
+    <button class="my-8 py-8 flex text-slate-200">
+      <a href="/writing"> &larr; Back to writing</a>
     </button>
     <div
-      class="mx-auto sm:px-6 max-w-3xl prose prose-slate prose-lg dark:prose-invert dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+      class="mx-auto sm:px-6 max-w-3xl prose prose-invert prose-lg dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
     >
       <h1
         class="text-xl sm:text-3xl font-bold leading-tight tracking-tight my-4"
@@ -52,9 +52,6 @@ const { Content } = await render(post);
         {formatDateMedium(entry.data.date)}
       </p>
 
-      <p class="text-gray-600">
-        <!-- {readTime} -->
-      </p>
 
       <div class="flex flex-wrap my-4">
         {
