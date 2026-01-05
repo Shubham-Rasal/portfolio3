@@ -40,7 +40,7 @@ const allTags = Array.from(
   <h1 class="text-2xl font-bold text-center my-4">Writing</h1>
   
   <!-- Tag Filter Section -->
-  <div class="md:w-1/2 w-3/4 mx-auto mb-6">
+  <div id="filter-section" class="md:w-1/2 w-3/4 mx-auto mb-6">
     <div class="flex flex-wrap gap-2 items-center">
       <span class="text-sm font-semibold text-gray-400">Filter by tag:</span>
       <button 
@@ -103,7 +103,6 @@ const allTags = Array.from(
     // Client-side filtering logic
     function updateFilter(selectedTag: string) {
       const posts = document.querySelectorAll('.post-item');
-      const filterButtons = document.querySelectorAll('.tag-filter');
       const filterStatus = document.getElementById('filter-status');
       
       let visibleCount = 0;
@@ -121,18 +120,21 @@ const allTags = Array.from(
         }
       });
       
-      // Update button states (only for top filter buttons, not post tag buttons)
-      const topFilterButtons = document.querySelectorAll('.md\\:w-1\\/2 .tag-filter');
-      topFilterButtons.forEach((btn) => {
-        const button = btn as HTMLButtonElement;
-        const btnTag = button.dataset.tag || '';
-        
-        if (btnTag === selectedTag) {
-          button.className = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-blue-500 text-white';
-        } else {
-          button.className = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-gray-700 text-gray-300 hover:bg-gray-600';
-        }
-      });
+      // Update button states (only for top filter buttons)
+      const filterSection = document.getElementById('filter-section');
+      if (filterSection) {
+        const topFilterButtons = filterSection.querySelectorAll('.tag-filter');
+        topFilterButtons.forEach((btn) => {
+          const button = btn as HTMLButtonElement;
+          const btnTag = button.dataset.tag || '';
+          
+          if (btnTag === selectedTag) {
+            button.className = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-blue-500 text-white';
+          } else {
+            button.className = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-gray-700 text-gray-300 hover:bg-gray-600';
+          }
+        });
+      }
       
       // Update filter status message
       if (filterStatus) {
@@ -163,11 +165,8 @@ const allTags = Array.from(
       }
     }
     
-    // Set up event listeners
-    document.addEventListener('DOMContentLoaded', () => {
-      initFilter();
-      
-      // Add click handlers to all filter buttons
+    // Attach event listeners to filter buttons
+    function attachEventListeners() {
       document.querySelectorAll('.tag-filter').forEach((button) => {
         button.addEventListener('click', (e) => {
           e.preventDefault();
@@ -176,21 +175,18 @@ const allTags = Array.from(
           updateFilter(tag);
         });
       });
+    }
+    
+    // Set up event listeners on initial load
+    document.addEventListener('DOMContentLoaded', () => {
+      initFilter();
+      attachEventListeners();
     });
     
     // Re-initialize on navigation (for Astro's client-side routing)
     document.addEventListener('astro:page-load', () => {
       initFilter();
-      
-      // Re-attach event listeners after page transition
-      document.querySelectorAll('.tag-filter').forEach((button) => {
-        button.addEventListener('click', (e) => {
-          e.preventDefault();
-          const btn = e.currentTarget as HTMLButtonElement;
-          const tag = btn.dataset.tag || '';
-          updateFilter(tag);
-        });
-      });
+      attachEventListeners();
     });
   </script>
 </Layout>
