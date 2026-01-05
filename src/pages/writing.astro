@@ -101,8 +101,9 @@ const allTags = Array.from(
   
   <script>
     // CSS class constants for better maintainability
-    const ACTIVE_BUTTON_CLASSES = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-blue-500 text-white';
-    const INACTIVE_BUTTON_CLASSES = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-gray-700 text-gray-300 hover:bg-gray-600';
+    const BASE_BUTTON_CLASSES = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors';
+    const ACTIVE_BUTTON_CLASSES = `${BASE_BUTTON_CLASSES} bg-blue-500 text-white`;
+    const INACTIVE_BUTTON_CLASSES = `${BASE_BUTTON_CLASSES} bg-gray-700 text-gray-300 hover:bg-gray-600`;
     
     // Client-side filtering logic
     function updateFilter(selectedTag: string) {
@@ -114,7 +115,14 @@ const allTags = Array.from(
       // Update post visibility
       posts.forEach((post) => {
         const postElement = post as HTMLElement;
-        const tags = JSON.parse(postElement.dataset.tags || '[]');
+        let tags: string[] = [];
+        
+        try {
+          tags = JSON.parse(postElement.dataset.tags || '[]');
+        } catch (e) {
+          console.error('Failed to parse tags:', e);
+          tags = [];
+        }
         
         if (!selectedTag || tags.includes(selectedTag)) {
           postElement.style.display = 'flex';
