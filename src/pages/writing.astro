@@ -15,6 +15,7 @@ interface BlogPost {
   data: {
     title: string;
     date: Date;
+    tags?: string[];
   };
 }
 
@@ -26,16 +27,49 @@ const allPosts = [...allBlogPosts, ...allInteractiveBlogPosts];
 allPosts.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
-console.log(allBlogPosts.length)
+
+// Get all unique tags from all posts
+const allTags = Array.from(
+  new Set(
+    allPosts.flatMap(post => post.data.tags || [])
+  )
+).sort();
 ---
 
 <Layout title="Writing">
   <h1 class="text-2xl font-bold text-center my-4">Writing</h1>
+  
+  <!-- Tag Filter Section -->
+  <div id="filter-section" class="md:w-1/2 w-3/4 mx-auto mb-6">
+    <div class="flex flex-wrap gap-2 items-center">
+      <span class="text-sm font-semibold text-gray-400">Filter by tag:</span>
+      <button 
+        data-tag=""
+        class="tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-blue-500 text-white"
+      >
+        All
+      </button>
+      {allTags.map(tag => (
+        <button 
+          data-tag={tag}
+          class="tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-gray-700 text-gray-300 hover:bg-gray-600"
+        >
+          {tag}
+        </button>
+      ))}
+    </div>
+    <div id="filter-status" class="mt-3 text-sm text-gray-400 hidden">
+    </div>
+  </div>
+
   <main class="md:w-1/2 w-3/4 mx-auto justify-center">
     {
       allPosts.map((post) => (
-        <a href={`/writing/${post.slug || post.id}`} class="no-underline">
-          <article class="flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col text-gray-200">
+        <article 
+          class="post-item flex border-dashed font-medium w-full py-3 md:py-[8px] dark:text-white border-b border-gray-200 hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 flex-col text-gray-200"
+          data-tags={JSON.stringify(post.data.tags || [])}
+        >
+          <a href={`/writing/${post.slug || post.id}`} class="no-underline">
             <div class="flex flex-col md:flex-row md:items-center">
               <h2 class="inline-flex text-gray-300 dark:text-gray-200">
                 <span>{post.data.title}</span>
@@ -47,9 +81,125 @@ console.log(allBlogPosts.length)
             <p class="text-gray-500 dark:text-gray-500 text-sm mt-2 leading-relaxed">
               {extractExcerpt(post.body || '', 120)}
             </p>
-          </article>
-        </a>
+          </a>
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="flex flex-wrap gap-1 mt-2">
+              {post.data.tags.map((tag: string) => (
+                <button
+                  data-tag={tag}
+                  class="tag-filter text-xs px-2 py-0.5 bg-gray-800 text-gray-400 rounded hover:bg-gray-700 transition-colors cursor-pointer"
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          )}
+        </article>
       ))
     }
   </main>
+  
+  <script>
+    // CSS class constants for better maintainability
+    const BASE_BUTTON_CLASSES = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors';
+    const ACTIVE_BUTTON_CLASSES = `${BASE_BUTTON_CLASSES} bg-blue-500 text-white`;
+    const INACTIVE_BUTTON_CLASSES = `${BASE_BUTTON_CLASSES} bg-gray-700 text-gray-300 hover:bg-gray-600`;
+    
+    // Client-side filtering logic
+    function updateFilter(selectedTag: string) {
+      const posts = document.querySelectorAll('.post-item');
+      const filterStatus = document.getElementById('filter-status');
+      
+      let visibleCount = 0;
+      
+      // Update post visibility
+      posts.forEach((post) => {
+        const postElement = post as HTMLElement;
+        let tags: string[] = [];
+        
+        try {
+          tags = JSON.parse(postElement.dataset.tags || '[]');
+        } catch (e) {
+          console.error('Failed to parse tags:', e);
+          tags = [];
+        }
+        
+        if (!selectedTag || tags.includes(selectedTag)) {
+          postElement.style.display = 'flex';
+          visibleCount++;
+        } else {
+          postElement.style.display = 'none';
+        }
+      });
+      
+      // Update button states (only for top filter buttons)
+      const filterSection = document.getElementById('filter-section');
+      if (filterSection) {
+        const topFilterButtons = filterSection.querySelectorAll('.tag-filter');
+        topFilterButtons.forEach((btn) => {
+          const button = btn as HTMLButtonElement;
+          const btnTag = button.dataset.tag || '';
+          
+          button.className = (btnTag === selectedTag) ? ACTIVE_BUTTON_CLASSES : INACTIVE_BUTTON_CLASSES;
+        });
+      }
+      
+      // Update filter status message
+      if (filterStatus) {
+        if (selectedTag) {
+          filterStatus.textContent = `Showing ${visibleCount} post${visibleCount !== 1 ? 's' : ''} tagged with "${selectedTag}"`;
+          filterStatus.classList.remove('hidden');
+        } else {
+          filterStatus.classList.add('hidden');
+        }
+      }
+      
+      // Update URL without reload
+      const url = new URL(window.location.href);
+      if (selectedTag) {
+        url.searchParams.set('tag', selectedTag);
+      } else {
+        url.searchParams.delete('tag');
+      }
+      window.history.pushState({}, '', url.toString());
+    }
+    
+    // Initialize filter from URL on page load
+    function initFilter() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const tagFromUrl = urlParams.get('tag');
+      if (tagFromUrl) {
+        updateFilter(tagFromUrl);
+      }
+    }
+    
+    // Handler function for filter button clicks
+    function handleFilterClick(e: Event) {
+      e.preventDefault();
+      const btn = e.currentTarget as HTMLButtonElement;
+      const tag = btn.dataset.tag || '';
+      updateFilter(tag);
+    }
+    
+    // Attach event listeners to filter buttons
+    function attachEventListeners() {
+      // Remove existing listeners first to prevent duplicates
+      document.querySelectorAll('.tag-filter').forEach((button) => {
+        button.removeEventListener('click', handleFilterClick);
+        button.addEventListener('click', handleFilterClick);
+      });
+    }
+    
+    // Set up event listeners on initial load
+    document.addEventListener('DOMContentLoaded', () => {
+      initFilter();
+      attachEventListeners();
+    });
+    
+    // Re-initialize on navigation (for Astro's client-side routing)
+    document.addEventListener('astro:page-load', () => {
+      initFilter();
+      attachEventListeners();
+    });
+  </script>
 </Layout>

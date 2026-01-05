@@ -56,9 +56,12 @@ const { Content } = await render(post);
       <div class="flex flex-wrap my-4">
         {
           entry.data.tags.map((tag: any) => (
-            <span class=" text-sm font-bold text-slate-900 mr-2  bg-slate-200 px-2 py-1 rounded-md">
+            <a 
+              href={`/writing?tag=${encodeURIComponent(tag)}`}
+              class="text-sm font-bold text-slate-900 mr-2 bg-slate-200 px-2 py-1 rounded-md hover:bg-slate-300 transition-colors"
+            >
               {tag}
-            </span>
+            </a>
           ))
         }
       </div>
