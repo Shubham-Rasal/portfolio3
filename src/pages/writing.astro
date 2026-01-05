@@ -100,6 +100,10 @@ const allTags = Array.from(
   </main>
   
   <script>
+    // CSS class constants for better maintainability
+    const ACTIVE_BUTTON_CLASSES = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-blue-500 text-white';
+    const INACTIVE_BUTTON_CLASSES = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-gray-700 text-gray-300 hover:bg-gray-600';
+    
     // Client-side filtering logic
     function updateFilter(selectedTag: string) {
       const posts = document.querySelectorAll('.post-item');
@@ -128,11 +132,7 @@ const allTags = Array.from(
           const button = btn as HTMLButtonElement;
           const btnTag = button.dataset.tag || '';
           
-          if (btnTag === selectedTag) {
-            button.className = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-blue-500 text-white';
-          } else {
-            button.className = 'tag-filter text-xs px-3 py-1 rounded-full transition-colors bg-gray-700 text-gray-300 hover:bg-gray-600';
-          }
+          button.className = (btnTag === selectedTag) ? ACTIVE_BUTTON_CLASSES : INACTIVE_BUTTON_CLASSES;
         });
       }
       
@@ -165,15 +165,20 @@ const allTags = Array.from(
       }
     }
     
+    // Handler function for filter button clicks
+    function handleFilterClick(e: Event) {
+      e.preventDefault();
+      const btn = e.currentTarget as HTMLButtonElement;
+      const tag = btn.dataset.tag || '';
+      updateFilter(tag);
+    }
+    
     // Attach event listeners to filter buttons
     function attachEventListeners() {
+      // Remove existing listeners first to prevent duplicates
       document.querySelectorAll('.tag-filter').forEach((button) => {
-        button.addEventListener('click', (e) => {
-          e.preventDefault();
-          const btn = e.currentTarget as HTMLButtonElement;
-          const tag = btn.dataset.tag || '';
-          updateFilter(tag);
-        });
+        button.removeEventListener('click', handleFilterClick);
+        button.addEventListener('click', handleFilterClick);
       });
     }
     
