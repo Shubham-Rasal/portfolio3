@@ -43,8 +43,6 @@ const allTags = Array.from(
     allPosts.flatMap(post => post.data.tags || [])
   )
 ).sort();
-
-console.log(allPosts.length)
 ---
 
 <Layout title="Writing">
@@ -105,8 +103,7 @@ console.log(allPosts.length)
                 {post.data.tags.map((tag: string) => (
                   <a
                     href={`/writing?tag=${encodeURIComponent(tag)}`}
-                    class="text-xs px-2 py-0.5 bg-gray-800 text-gray-400 rounded hover:bg-gray-700 transition-colors"
-                    onclick="event.stopPropagation()"
+                    class="tag-link text-xs px-2 py-0.5 bg-gray-800 text-gray-400 rounded hover:bg-gray-700 transition-colors"
                   >
                     {tag}
                   </a>
@@ -118,4 +115,14 @@ console.log(allPosts.length)
       ))
     }
   </main>
+  
+  <script>
+    // Prevent tag links from triggering the parent article link
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      if (target.classList.contains('tag-link')) {
+        e.stopPropagation();
+      }
+    });
+  </script>
 </Layout>
