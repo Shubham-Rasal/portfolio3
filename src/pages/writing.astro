@@ -44,7 +44,7 @@ const allTags = Array.from(
   )
 ).sort();
 
-console.log(allBlogPosts.length)
+console.log(allPosts.length)
 ---
 
 <Layout title="Writing">
@@ -103,9 +103,13 @@ console.log(allBlogPosts.length)
             {post.data.tags && post.data.tags.length > 0 && (
               <div class="flex flex-wrap gap-1 mt-2">
                 {post.data.tags.map((tag: string) => (
-                  <span class="text-xs px-2 py-0.5 bg-gray-800 text-gray-400 rounded">
+                  <a
+                    href={`/writing?tag=${encodeURIComponent(tag)}`}
+                    class="text-xs px-2 py-0.5 bg-gray-800 text-gray-400 rounded hover:bg-gray-700 transition-colors"
+                    onclick="event.stopPropagation()"
+                  >
                     {tag}
-                  </span>
+                  </a>
                 ))}
               </div>
             )}
