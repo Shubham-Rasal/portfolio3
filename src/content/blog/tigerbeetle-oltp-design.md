@@ -1,7 +1,7 @@
 ---
 title: Designing a High-Performance OLTP Database from First Principles
 slug: tigerbeetle-oltp-design
-date: 2024-01-06
+date: 2026-01-06
 author: Shubham Rasal
 tags:
   - database
@@ -524,3 +524,12 @@ It is a style that makes correctness obvious—and bugs uncomfortable.
 ---
 
 **End result:** a database designed from first principles, where performance, safety, and determinism are not trade-offs, but consequences of the architecture.
+
+---
+
+## References
+
+- [TigerBeetle Documentation - Concepts](https://docs.tigerbeetle.com/concepts/)
+- [Viewstamped Replication Explained](https://blog.brunobonacci.com/2018/07/15/viewstamped-replication-explained/)
+- [InfoQ Presentation: Redesigning OLTP](https://www.infoq.com/presentations/redesign-oltp/)
+- [TigerBeetle Codebase on GitHub](https://github.com/tigerbeetle/tigerbeetle)
