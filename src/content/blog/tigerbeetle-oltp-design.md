@@ -266,8 +266,7 @@ Every data structure—from protocol headers to on-disk state—is fortified wit
   * Acts as the CPU of a TigerBeetle node
   * Transitions state based on VSR messages (Prepare, Commit, ViewChange, etc.)
 
-One interesting finding from this crash report
-([https://github.com/tigerbeetle/tigerbeetle/issues/1590](https://github.com/tigerbeetle/tigerbeetle/issues/1590))
+One interesting finding from [this crash report](https://github.com/tigerbeetle/tigerbeetle/issues/1590)
 is how the `quorum_headers` function tallies cluster responses.
 
 Time is measured not in wall-clock seconds, but in **logical ticks**—processed messages via `replica.tick()`.
@@ -342,8 +341,7 @@ Instead, it implements its own transactional guarantees using a **cryptographic 
 
 ### SuperBlockHeader
 
-Defined in
-[https://github.com/tigerbeetle/tigerbeetle/blob/main/src/vsr/superblock.zig](https://github.com/tigerbeetle/tigerbeetle/blob/main/src/vsr/superblock.zig)
+Defined in [src/vsr/superblock.zig](https://github.com/tigerbeetle/tigerbeetle/blob/main/src/vsr/superblock.zig)
 
 Uses Zig's `extern struct` to guarantee precise on-disk layout.
 
@@ -481,8 +479,7 @@ TigerBeetle avoids this entirely:
 * Allocate one large contiguous block
 * Runtime: pop and return buffers from a pool
 
-See `src/message_pool.zig` and this stack trace:
-[https://github.com/tigerbeetle/tigerbeetle/issues/1137](https://github.com/tigerbeetle/tigerbeetle/issues/1137)
+See `src/message_pool.zig` and [this stack trace](https://github.com/tigerbeetle/tigerbeetle/issues/1137)
 
 ```
 Static Memory Allocation Flow:
