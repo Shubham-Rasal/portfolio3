@@ -10,8 +10,6 @@ tags:
   - performance
 ---
 
-# Designing a High-Performance OLTP Database from First Principles
-
 *A deep dive inspired by TigerBeetle and Viewstamped Replication*
 
 While reading about **Viewstamped Replication (VSR)**, I came across **TigerBeetle**, which uses this replication protocol to achieve extremely high reliability. Little did I know how fascinating the design of such a database would turn out to be.
