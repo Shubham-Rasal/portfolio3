@@ -45,12 +45,23 @@ export const { getStaticPaths, GET } = OGImageRoute({
   getImageOptions: (_path, page) => ({
     title: page.title,
     description: page.description,
-    logo: {
-      path: './public/og.png',
+    bgGradient: [[24, 24, 27]], // Dark background similar to site
+    border: { color: [63, 63, 70], width: 20 }, // Subtle border
+    padding: 60,
+    font: {
+      title: {
+        color: [255, 255, 255],
+        size: 72,
+        families: ['sans-serif'],
+        weight: 'Bold',
+      },
+      description: {
+        color: [161, 161, 170],
+        size: 36,
+        families: ['sans-serif'],
+        weight: 'Normal',
+      },
     },
-    // Configure fonts to avoid external network requests
-    fonts: [],
-    
-    // There are a bunch more options you can use here!
+    fonts: [], // Empty to avoid external font loading
   }),
 });
