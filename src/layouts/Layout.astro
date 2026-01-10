@@ -4,9 +4,10 @@ import { ClientRouter } from "astro:transitions";
 
 export interface Props {
   title: string;
+  ogImage?: string;
 }
 
-const { title } = Astro.props;
+const { title, ogImage } = Astro.props;
 
 // import SpeedInsights from "@vercel/speed-insights/astro";
 ---
@@ -29,7 +30,7 @@ const { title } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:image" content="/preview.png" />
+    <meta property="og:image" content={ogImage || "/preview.png"} />
     <meta name="google-site-verification" content="xcfPLYm2QbAGmBNI4r4k6BEDQnTpTWgWtsltzZvl7cE" />
     <link rel="stylesheet" href="/globals.css" />
     <!-- <SpeedInsights /> -->
