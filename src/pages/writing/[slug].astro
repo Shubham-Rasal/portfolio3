@@ -31,9 +31,12 @@ if (post === undefined) {
 }
 const { Content } = await render(post);
 
+// Construct the OG image URL for this blog post
+const ogImageUrl = new URL(`/open-graph/writing/${entry.id}.png`, Astro.site).href;
+
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} ogImage={ogImageUrl}>
   <article
     class="px-6 sm:px-6 py-2 sm:py-16 lg:py-12 mx-auto max-w-4xl text-lg text-slate-300"
   >
