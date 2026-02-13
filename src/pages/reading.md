@@ -231,6 +231,46 @@ date: "13 Sep 2025"
 
 <div class="reading-category">
 
+### Articles from the Archive You Won't Regret Reading
+
+<div class="reading-item">
+  <div class="reading-title">How to Time Travel</div>
+  <div class="reading-description">Brian Chesky</div>
+  <div class="reading-links">
+    <a href="https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0" class="reading-link blog" target="_blank" rel="noopener">📝 Medium</a>
+  </div>
+</div>
+
+<div class="reading-item">
+  <div class="reading-title">High Agency</div>
+  <div class="reading-description">George Mack</div>
+  <div class="reading-links">
+    <a href="https://highagency.com" class="reading-link blog" target="_blank" rel="noopener">🔗 Website</a>
+  </div>
+</div>
+
+<div class="reading-item">
+  <div class="reading-title">How to Get Lucky</div>
+  <div class="reading-description">Taylor Pearson</div>
+  <div class="reading-links">
+    <a href="https://taylorpearson.me/luck/" class="reading-link blog" target="_blank" rel="noopener">📝 Blog</a>
+  </div>
+</div>
+
+<div class="reading-item">
+  <div class="reading-title">Childhoods of Exceptional People</div>
+  <div class="reading-description">Henrik Karlsson</div>
+  <div class="reading-links">
+    <a href="https://www.henrikkarlsson.xyz/p/childhoods" class="reading-link blog" target="_blank" rel="noopener">📝 Substack</a>
+  </div>
+</div>
+
+</div>
+
+---
+
+<div class="reading-category">
+
 ### Earlier Readings
 
 <div class="reading-item">
