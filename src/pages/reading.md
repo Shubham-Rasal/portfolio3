@@ -237,7 +237,7 @@ date: "13 Sep 2025"
   <div class="reading-title">How to Time Travel</div>
   <div class="reading-description">Brian Chesky</div>
   <div class="reading-links">
-    <a href="https://medium.com/@bchesky/how-to-time-travel-b604096d5825" class="reading-link blog" target="_blank" rel="noopener">📝 Medium</a>
+    <a href="https://medium.com/@bchesky/how-to-time-travel-b604096d5ed0" class="reading-link blog" target="_blank" rel="noopener">📝 Medium</a>
   </div>
 </div>
 
@@ -245,7 +245,7 @@ date: "13 Sep 2025"
   <div class="reading-title">High Agency</div>
   <div class="reading-description">George Mack</div>
   <div class="reading-links">
-    <a href="https://twitter.com/george__mack/status/1447616551354363909" class="reading-link blog" target="_blank" rel="noopener">🐦 Twitter Thread</a>
+    <a href="https://highagency.com" class="reading-link blog" target="_blank" rel="noopener">🔗 Website</a>
   </div>
 </div>
 
