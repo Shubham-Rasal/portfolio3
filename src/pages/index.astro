@@ -21,7 +21,7 @@ allBlogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.da
 const topBlogPosts: BlogPost[] = allBlogPosts.slice(0, 2);
 
 const activeProjects = projects
-  .filter((project) => project.active)
+  .filter((project) => project.active && (project.github || project.live))
   .sort((a, b) => (b.index ?? 0) - (a.index ?? 0));
 ---
 
