@@ -28,47 +28,49 @@ for (let i = 0; i < projects.length; i++) {
               <h2 class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-4">
                 {cat || "Other"}
               </h2>
-              <div class="space-y-4">
+              <ul class="space-y-4 text-sm text-slate-700">
                 {(arr as any[]).map((project) => (
-                  <article class="rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                    <div class="flex flex-wrap items-center gap-2">
+                  <li class="border-b border-slate-200 pb-3 last:border-b-0 last:pb-0">
+                    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                       {project.live || project.github ? (
                         <a
                           href={project.live ? project.live : project.github}
-                          class="text-lg font-semibold text-slate-900 hover:text-blue-700"
+                          class="text-base font-semibold text-slate-900 hover:text-blue-700"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           {project.title}
                         </a>
                       ) : (
-                        <span class="text-lg font-semibold text-slate-900">{project.title}</span>
+                        <span class="text-base font-semibold text-slate-900">{project.title}</span>
                       )}
-                      {project.live && (
-                        <a
-                          href={project.live}
-                          class="text-xs uppercase tracking-[0.15em] text-slate-500 hover:text-blue-700"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Live
-                        </a>
-                      )}
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          class="text-xs uppercase tracking-[0.15em] text-slate-500 hover:text-blue-700"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          GitHub
-                        </a>
-                      )}
+                      <div class="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.15em] text-slate-500">
+                        {project.live && (
+                          <a
+                            href={project.live}
+                            class="hover:text-blue-700"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Live
+                          </a>
+                        )}
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            class="hover:text-blue-700"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            GitHub
+                          </a>
+                        )}
+                      </div>
                     </div>
-                    <p class="mt-2 text-sm text-slate-600">{project.description}</p>
-                  </article>
+                    <p class="mt-1 text-sm text-slate-600">{project.description}</p>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </section>
           )
         );
