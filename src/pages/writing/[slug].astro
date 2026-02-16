@@ -38,20 +38,20 @@ const ogImageUrl = new URL(`/open-graph/writing/${entry.id}.png`, Astro.site).hr
 
 <Layout title={entry.data.title} ogImage={ogImageUrl}>
   <article
-    class="px-6 sm:px-6 py-2 sm:py-16 lg:py-12 mx-auto max-w-4xl text-lg text-slate-300"
+    class="px-6 sm:px-6 py-2 sm:py-16 lg:py-12 mx-auto max-w-4xl text-lg text-slate-800"
   >
-    <button class="my-8 py-8 flex text-slate-200">
-      <a href="/writing"> &larr; Back to writing</a>
+    <button class="my-8 py-8 flex text-slate-600 hover:text-slate-900">
+      <a href="/writing" class="text-inherit"> &larr; Back to writing</a>
     </button>
     <div
-      class="mx-auto sm:px-6 max-w-3xl prose prose-invert prose-lg dark:prose-headings:text-slate-300 prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-primary dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+      class="mx-auto sm:px-6 max-w-3xl prose prose-slate prose-lg prose-headings:text-slate-900 prose-headings:font-semibold prose-headings:leading-tight prose-headings:tracking-tight prose-a:text-blue-700 prose-img:rounded-md prose-img:shadow-lg mt-8"
     >
       <h1
         class="text-xl sm:text-3xl font-bold leading-tight tracking-tight my-4"
       >
         {entry.data.title}
       </h1>
-      <p class="text-gray-600">
+      <p class="text-slate-500">
         {formatDateMedium(entry.data.date)}
       </p>
 
@@ -61,7 +61,7 @@ const ogImageUrl = new URL(`/open-graph/writing/${entry.id}.png`, Astro.site).hr
           entry.data.tags.map((tag: any) => (
             <a 
               href={`/writing?tag=${encodeURIComponent(tag)}`}
-              class="text-sm font-bold text-slate-900 mr-2 bg-slate-200 px-2 py-1 rounded-md hover:bg-slate-300 transition-colors"
+              class="text-sm font-semibold text-slate-700 mr-2 bg-slate-200 px-2 py-1 rounded-md hover:bg-slate-300 transition-colors"
             >
               {tag}
             </a>
@@ -90,9 +90,3 @@ const ogImageUrl = new URL(`/open-graph/writing/${entry.id}.png`, Astro.site).hr
     crossorigin="anonymous"
     async></script>
 </Layout>
-
-<style>
-  h2 {
-    color: red;
-  }
-</style>
