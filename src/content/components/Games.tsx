@@ -111,10 +111,10 @@ const HierarchySimulator = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 bg-gray-800/70 dark:bg-gray-800/90 rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.8)] border border-gray-700/70">
+    <div className="max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-[0_4px_16px_rgba(15,23,42,0.12)] border border-slate-200">
       <div className="text-center mb-4">
-        <h2 className="text-2xl font-bold text-slate-300 mb-2">Social Hierarchy Simulation</h2>
-        <p className="text-sm text-slate-400">Watch how different systems affect social harmony and value creation</p>
+        <h2 className="text-2xl font-bold text-slate-800 mb-2">Social Hierarchy Simulation</h2>
+        <p className="text-sm text-slate-600">Watch how different systems affect social harmony and value creation</p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-4">
@@ -132,19 +132,19 @@ const HierarchySimulator = () => {
               </button>
               <button
                 onClick={reset}
-                className="px-3 py-1.5 bg-slate-600 hover:bg-slate-700 text-white rounded-md flex items-center gap-1.5 text-sm"
+                className="px-3 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-md flex items-center gap-1.5 text-sm"
               >
                 <RotateCcw size={14} />
                 Reset
               </button>
             </div>
-            <div className="text-xs text-slate-400">Time: {time}s</div>
+            <div className="text-xs text-slate-500">Time: {time}s</div>
           </div>
 
           <div className="mb-3">
-            <label className="block text-xs font-medium text-slate-300 mb-1">System Type:</label>
+            <label className="block text-xs font-medium text-slate-600 mb-1">System Type:</label>
             <div className="flex gap-3">
-              <label className="flex items-center text-xs text-slate-300">
+              <label className="flex items-center text-xs text-slate-600">
                 <input
                   type="radio"
                   value="status"
@@ -154,7 +154,7 @@ const HierarchySimulator = () => {
                 />
                 Pure Status Competition
               </label>
-              <label className="flex items-center text-xs text-slate-300">
+              <label className="flex items-center text-xs text-slate-600">
                 <input
                   type="radio"
                   value="religion"
@@ -167,7 +167,7 @@ const HierarchySimulator = () => {
             </div>
           </div>
 
-          <div className="border border-gray-700/50 rounded-md p-2 bg-gray-900/70 relative overflow-hidden" style={{ height: '250px' }}>
+          <div className="border border-slate-200 rounded-md p-2 bg-slate-50 relative overflow-hidden" style={{ height: '250px' }}>
             <svg width="100%" height="100%" className="absolute inset-0">
               {people.map(person => (
                 <circle
@@ -181,19 +181,19 @@ const HierarchySimulator = () => {
                 />
               ))}
             </svg>
-            <div className="absolute bottom-1 left-1 text-xs text-gray-400">
+            <div className="absolute bottom-1 left-1 text-xs text-slate-500">
               Circle size = Status level, Color = Happiness/Purpose
             </div>
           </div>
         </div>
 
         <div className="lg:w-2/5 space-y-3">
-          <div className="bg-slate-700/50 p-3 rounded-md border border-slate-600/80">
+          <div className="bg-slate-50 p-3 rounded-md border border-slate-200">
             <div className="flex items-center gap-1.5 mb-1.5">
-              <Users size={16} className="text-sky-400" />
-              <h3 className="font-semibold text-sm text-sky-300">Population Metrics</h3>
+              <Users size={16} className="text-blue-600" />
+              <h3 className="font-semibold text-sm text-blue-700">Population Metrics</h3>
             </div>
-            <div className="space-y-1 text-xs text-slate-300">
+            <div className="space-y-1 text-xs text-slate-700">
               <div className="flex justify-between">
                 <span>Average Happiness:</span>
                 <span className="font-medium">
@@ -209,32 +209,32 @@ const HierarchySimulator = () => {
             </div>
           </div>
 
-          <div className="bg-slate-700/50 p-3 rounded-md border border-slate-600/80">
+          <div className="bg-slate-50 p-3 rounded-md border border-slate-200">
             <div className="flex items-center gap-1.5 mb-1.5">
-              <AlertTriangle size={16} className="text-red-400" />
-              <h3 className="font-semibold text-sm text-red-300">Social Tensions</h3>
+              <AlertTriangle size={16} className="text-red-600" />
+              <h3 className="font-semibold text-sm text-red-700">Social Tensions</h3>
             </div>
-            <div className="w-full bg-slate-600 rounded-full h-2">
+            <div className="w-full bg-slate-200 rounded-full h-2">
               <div 
                 className="bg-red-500 h-2 rounded-full transition-all duration-300" 
                 style={{ width: `${Math.min(100, tensions)}%` }}
               ></div>
             </div>
-            <div className="text-xs text-red-400 mt-0.5">{Math.round(tensions)}% tension level</div>
+            <div className="text-xs text-red-600 mt-0.5">{Math.round(tensions)}% tension level</div>
           </div>
 
-          <div className="bg-slate-700/50 p-3 rounded-md border border-slate-600/80">
+          <div className="bg-slate-50 p-3 rounded-md border border-slate-200">
             <div className="flex items-center gap-1.5 mb-1.5">
-              <TrendingUp size={16} className="text-green-400" />
-              <h3 className="font-semibold text-sm text-green-300">Total Value Created</h3>
+              <TrendingUp size={16} className="text-emerald-600" />
+              <h3 className="font-semibold text-sm text-emerald-700">Total Value Created</h3>
             </div>
-            <div className="text-xl font-bold text-green-300">{Math.round(totalValue)}</div>
-            <div className="text-xs text-green-400">Cumulative societal benefit</div>
+            <div className="text-xl font-bold text-emerald-700">{Math.round(totalValue)}</div>
+            <div className="text-xs text-emerald-600">Cumulative societal benefit</div>
           </div>
 
-          <div className="bg-slate-700/50 p-3 rounded-md text-xs border border-slate-600/80">
-            <h4 className="font-semibold text-yellow-300 mb-1.5">Observations:</h4>
-            <ul className="space-y-0.5 text-yellow-400">
+          <div className="bg-slate-50 p-3 rounded-md text-xs border border-slate-200">
+            <h4 className="font-semibold text-amber-700 mb-1.5">Observations:</h4>
+            <ul className="space-y-0.5 text-amber-600">
               {systemType === 'status' ? (
                 <>
                   <li>• Pure status competition creates inequality</li>
