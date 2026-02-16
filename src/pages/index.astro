@@ -40,7 +40,7 @@ const activeProjects = projects
             {activeProjects.map((project) => (
               <li>
                 <a
-                  href={project.github || project.live}
+                  href={project.live || project.github}
                   class="font-semibold text-blue-700 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
