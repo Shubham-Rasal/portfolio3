@@ -1,0 +1,14 @@
+---
+import ReadingLayout from "../layouts/ReadingLayout.astro";
+import ReadingPageContent from "../components/react/ReadingPageContent.tsx";
+import { readingCategories, readingIntro } from "../data/reading";
+---
+
+<ReadingLayout
+  title="Reading list"
+  author="Shubham Rasal"
+  date="13 Sep 2025"
+  intro={readingIntro}
+>
+  <ReadingPageContent categories={readingCategories} />
+</ReadingLayout>
