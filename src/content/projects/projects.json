@@ -1,9 +1,169 @@
 [
   {
+    "index": 20,
+    "title": "sam",
+    "description": "Agentic video editor — Remotion timeline, OpenCode agent, FFmpeg pipeline (Electron).",
+    "github": "https://github.com/Shubham-Rasal/sam",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 21,
+    "title": "OpenVibe",
+    "description": "Open-source web UI for OpenCode — chat, build, and code with AI.",
+    "github": "https://github.com/Shubham-Rasal/openvibe",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 22,
+    "title": "fairy",
+    "description": "Obsidian plugin — fill placeholders in notes with Gemini, web search, and vault context.",
+    "github": "https://github.com/Shubham-Rasal/fairy",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 23,
+    "title": "competitor-analyser",
+    "description": "AI competitor intelligence — discovers rivals, SWOT analysis, x402-gated, ERC-8004.",
+    "github": "https://github.com/Shubham-Rasal/competitor-analyser",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 24,
+    "title": "brand-agent",
+    "description": "OpenBrand agent — extract logos, colors, and images from any URL; x402, Filecoin storage.",
+    "github": "https://github.com/Shubham-Rasal/brand-agent",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 25,
+    "title": "anp-chat-client",
+    "description": "Open-source MCP client — multi-provider AI chatbot.",
+    "github": "https://github.com/Shubham-Rasal/anp-chat-client",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 26,
+    "title": "mstudio",
+    "description": "Main site — Next.js blog and content station.",
+    "github": "https://github.com/Shubham-Rasal/mstudio",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 27,
+    "title": "stackforge-v2",
+    "description": "Vibe-code fullstack dapps on Stacks L2.",
+    "github": "https://github.com/Shubham-Rasal/stackforge-v2",
+    "active": true,
+    "category": "Web3 & trading"
+  },
+  {
+    "index": 28,
+    "title": "FullStackr",
+    "description": "AI-powered fullstack dapp builder on Stacks.",
+    "github": "https://github.com/Shubham-Rasal/FullStackr",
+    "active": true,
+    "category": "Web3 & trading"
+  },
+  {
+    "index": 29,
+    "title": "polymer",
+    "description": "Polymarket toolkit — trading, CLOB client, streaming market data (Rust).",
+    "github": "https://github.com/Shubham-Rasal/polymer",
+    "active": true,
+    "category": "Web3 & trading"
+  },
+  {
+    "index": 30,
+    "title": "foc-worker",
+    "description": "Persistent Akash worker for Filecoin CDN uploads via Synapse SDK.",
+    "github": "https://github.com/Shubham-Rasal/foc-worker",
+    "active": true,
+    "category": "Web3 & trading"
+  },
+  {
+    "index": 31,
+    "title": "resend-cli-og",
+    "description": "The official CLI for Resend (upstream contributions).",
+    "github": "https://github.com/Shubham-Rasal/resend-cli-og",
+    "active": true,
+    "category": "DevTools"
+  },
+  {
+    "index": 32,
+    "title": "resend-cli",
+    "description": "CLI for sending email programmatically with Resend.",
+    "github": "https://github.com/Shubham-Rasal/resend-cli",
+    "active": true,
+    "category": "DevTools"
+  },
+  {
+    "index": 33,
+    "title": "investor-finder",
+    "description": "Agent that finds investors for your startup.",
+    "github": "https://github.com/Shubham-Rasal/investor-finder",
+    "active": true,
+    "category": "Agents"
+  },
+  {
+    "index": 34,
+    "title": "seo-agent",
+    "description": "SEO agent experiment.",
+    "github": "https://github.com/Shubham-Rasal/seo-agent",
+    "active": true,
+    "category": "Agents"
+  },
+  {
+    "index": 35,
+    "title": "atomicbot",
+    "description": "Personal AI assistant — any OS, any platform.",
+    "github": "https://github.com/Shubham-Rasal/atomicbot",
+    "active": true,
+    "category": "Agents"
+  },
+  {
+    "index": 36,
+    "title": "FreePress",
+    "description": "Run your own publication on your machine — discover others, share knowledge.",
+    "github": "https://github.com/Shubham-Rasal/FreePress",
+    "active": true,
+    "category": "Apps"
+  },
+  {
+    "index": 37,
+    "title": "cards",
+    "description": "Turn any site into a power card.",
+    "github": "https://github.com/Shubham-Rasal/cards",
+    "active": true,
+    "category": "Apps"
+  },
+  {
+    "index": 38,
+    "title": "Feedo",
+    "description": "Collect feedback from users in a simple way.",
+    "github": "https://github.com/Shubham-Rasal/Feedo",
+    "active": true,
+    "category": "Apps"
+  },
+  {
+    "index": 39,
+    "title": "parakeet.cpp",
+    "description": "Fast Parakeet inference in C++ — Axiom, MPS, CUDA.",
+    "github": "https://github.com/Shubham-Rasal/parakeet.cpp",
+    "active": true,
+    "category": "Systems"
+  },
+  {
     "index": 9,
     "title": "Settle",
     "description": "Universal USDC payment gateway for merchants. Accept on any chain, settle wherever you want.",
-    "github": "https://github.com/Shubham-Rasal/Settle",
+    "github": "https://github.com/Shubham-Rasal/settle",
     "live": "https://settle.capital/",
     "active": true,
     "category": "web3"
@@ -42,7 +202,7 @@
     "category": "app"
   },
   {
-    "index": 13,
+    "index": 14,
     "title": "otakuverse",
     "description": "A anime translation platform.",
     "github": "https://github.com/Shubham-Rasal/otakuverse",

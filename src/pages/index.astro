@@ -2,27 +2,20 @@
 import { MdEmail } from "react-icons/md";
 import Layout from "../layouts/Layout.astro";
 import { Github, Twitter } from "lucide-react";
-import { getCollection } from "astro:content";
-import projects from "../content/projects/projects.json";
 
-interface BlogPost {
-  slug?: string;
-  id?: string;
-  data: {
-    title: string;
-    date: Date;
-    description?: string;
-  };
-}
-
-// Fetch top 2 blog posts
-const allBlogPosts: BlogPost[] = await getCollection("blog");
-allBlogPosts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-const topBlogPosts: BlogPost[] = allBlogPosts.slice(0, 2);
-
-const activeProjects = projects
-  .filter((project) => project.active && (project.github || project.live))
-  .sort((a, b) => (b.index ?? 0) - (a.index ?? 0));
+const recentProjects = [
+  {
+    title: "sam",
+    description:
+      "Agentic video editor — Just prompt your video into life",
+    github: "https://github.com/Shubham-Rasal/sam",
+  },
+  {
+    title: "OpenVibe",
+    description: "Open-source web UI for OpenCode — chat, build, and code with AI.",
+    github: "https://github.com/Shubham-Rasal/openvibe",
+  },
+] as const;
 ---
 
 <Layout title="About">
@@ -37,10 +30,10 @@ const activeProjects = projects
               — Built a workflow visualisation engine (FlowGenie) for the SRE team, moved UI to React, made things smoother for everyone.</li>
           <li class="italic">recently:</li>
           <ul class="ml-6 list-[circle] text-md space-y-2">
-            {activeProjects.map((project) => (
+            {recentProjects.map((project) => (
               <li>
                 <a
-                  href={project.live || project.github}
+                  href={project.github}
                   class="font-semibold text-blue-700 hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -52,7 +45,12 @@ const activeProjects = projects
             ))}
           </ul>
           <li>prev: Back End Developer @ <span class="font-semibold text-emerald-700">Shortsqueeze</span>  — Built APIs, auth, and a doc parser in Go. Made things fast with concurrency.</li>
-          <li>in undergrad: system lead @ <span class="font-semibold text-blue-700"><a href="https://webclub.nitk.ac.in/">Web Club</a></span>, led club's <span class="font-semibold text-purple-700">hackathon</span> and <span class="font-semibold text-purple-700">CTFs</span></li>
+          <li class="italic">
+            my core values
+            <ul class="ml-6 mt-2 list-[circle] text-md not-italic space-y-2">
+              <li>high agency and a maniacal sense of urgency</li>
+            </ul>
+          </li>
         </ul>
       </section>
       <div class="flex flex-row w-full justify-start gap-4 mb-8">

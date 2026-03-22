@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 import remarkToc from 'remark-toc';
 // import rehypeAccessibleEmojis from 'rehype-accessible-emojis';
 
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 
 import mdx from '@astrojs/mdx';
 
