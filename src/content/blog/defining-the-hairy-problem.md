@@ -3,7 +3,8 @@ title: Defining the Hairy Problem
 slug: defining-the-hairy-problem
 date: 2026-01-10
 author: Shubham Rasal
-tags: [philosophy, productivity, problem-solving]
+tags:
+  - philosophy
 ---
 
 This is the fundamental issue each knowledge worker needs to solve on a daily basis.

@@ -4,10 +4,8 @@ slug: devlog-4
 date: 2025-02-22
 author: Shubham Rasal
 tags:
-  - hacking
-  - bounty
-  - web3
-  - programming
+  - devlog
+  - web
 ---
 I am back after a long time and this time it's different.
 

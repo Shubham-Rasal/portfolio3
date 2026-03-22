@@ -4,9 +4,8 @@ slug: ai-manga-translator
 date: 2024-12-29
 author: Shubham Rasal
 tags:
-  - programming
   - ai
-  - manga
+  - web
 ---
 On finding out about the Spheron Network's bounty challenge, I decided to find out what I can do among the challenges - https://github.com/spheronFdn/sos-ai-bounty.
 

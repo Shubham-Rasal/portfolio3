@@ -4,10 +4,7 @@ slug: tigerbeetle-oltp-design
 date: 2026-01-06
 author: Shubham Rasal
 tags:
-  - database
   - systems
-  - tigerbeetle
-  - performance
 ---
 
 *A deep dive inspired by TigerBeetle and Viewstamped Replication*

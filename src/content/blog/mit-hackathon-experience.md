@@ -3,7 +3,9 @@ title: M# Hackathon Experience
 slug: mit-hackathon-experience
 date: 2023-10-28
 author: Shubham Rasal
-tags: [ai, hackathon, web]
+tags:
+  - ai
+  - web
 ---
 
 

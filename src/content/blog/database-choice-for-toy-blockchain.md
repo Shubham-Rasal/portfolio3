@@ -3,7 +3,8 @@ title: Database choice for toy blockchain in Go
 slug: database-choice-for-toy-blockchain
 date: 2023-06-17 
 author: Shubham Rasal
-tags: [blockchain, go, database]
+tags:
+  - systems
 ---
 
 This blog post is one of the many blog posts in the series of blog posts about my toy blockchain in Go. In order to understand Ethereum, I have decided to build one from scratch. Will use go-ethereum as a reference.

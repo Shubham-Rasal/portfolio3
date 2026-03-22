@@ -5,8 +5,6 @@ date: 2026-01-05
 author: Shubham Rasal
 tags:
   - philosophy
-  - math
-  - science
 ---
 
 If you really love something, you need to understand the language in which it speaks. For all universe lovers, especially people who are trying to understand the will of universe, it is crucial to understand math to a pretty high degree so that you can decipher it's thoughts. The problem with math as a language is that it is really dense and packed with meaning. It can be arbitrarily complex and can branch out into infinite dialects. 

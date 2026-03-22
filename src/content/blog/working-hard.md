@@ -4,8 +4,8 @@ slug: working-hard
 date: 2025-04-10
 author: Shubham Rasal
 tags:
-  - philosophy
   - life
+  - philosophy
 ---
 
 Long ago, I had an opinion that I should be able to get what I want without working hard -- whatever that meant to me at that time. Now that I look back at that opinion, I feel that although I wasn't wrong, I wasn't right either.

@@ -5,7 +5,6 @@ date: 2025-06-06
 author: Shubham Rasal
 tags:
   - ai
-  - farming
   - devlog
 ---
 This devlog is focused on KrishiAI and it's pivot.

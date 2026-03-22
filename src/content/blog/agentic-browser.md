@@ -5,8 +5,7 @@ date: 2025-05-31
 author: Shubham Rasal
 tags:
   - ai
-  - agents
-  - idea
+  - web
 ---
 
 I was scrolling X, as you do, and thinking: **How do you _really_ build an AI-native agentic browser?**

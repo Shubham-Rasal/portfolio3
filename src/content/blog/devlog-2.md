@@ -4,9 +4,8 @@ slug: devlog-2
 date: 2024-11-07
 author: Shubham Rasal
 tags:
-  - programming
-  - devlog
   - ai
+  - devlog
   - systems
 ---
 Since this is the first devlog of my currently active projects, it will be a long one.

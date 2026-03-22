@@ -6,7 +6,6 @@ author: Shubham Rasal
 tags:
   - ai
   - philosophy
-  - agi
 ---
 
 Yeah the title is a little misleading if you have no context what I was thinking about the last few weeks.

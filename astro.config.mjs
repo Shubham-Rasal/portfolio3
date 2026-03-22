@@ -18,10 +18,11 @@ export default defineConfig({
   output: 'static',
 
   markdown: {
-    syntaxHighlight: 'prism',
-    // Applied to .md and .mdx files
+    syntaxHighlight: 'shiki',
+    shikiConfig: {
+      theme: 'github-light',
+    },
     remarkPlugins: [remarkToc],
-    // rehypePlugins: [rehypeAccessibleEmojis],
   },
 
   adapter: vercel({

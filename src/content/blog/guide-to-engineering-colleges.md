@@ -5,7 +5,6 @@ date: 2025-05-05
 author: Shubham Rasal
 tags:
   - life
-  - experience
 ---
 Navigating an engineering college can overwhelming sometimes. I am writing this from my own experiences. So take any advice in this blog with a grain of salt.
 
