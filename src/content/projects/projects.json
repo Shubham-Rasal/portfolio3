@@ -152,14 +152,6 @@
     "category": "Apps"
   },
   {
-    "index": 39,
-    "title": "parakeet.cpp",
-    "description": "Fast Parakeet inference in C++ — Axiom, MPS, CUDA.",
-    "github": "https://github.com/Shubham-Rasal/parakeet.cpp",
-    "active": true,
-    "category": "Systems"
-  },
-  {
     "index": 9,
     "title": "Settle",
     "description": "Universal USDC payment gateway for merchants. Accept on any chain, settle wherever you want.",
