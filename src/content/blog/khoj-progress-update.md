@@ -6,7 +6,6 @@ author: Shubham Rasal
 tags:
   - ai
   - devlog
-  - web
 ---
 Khoj is our platform for **AI-powered, location-based treasure hunts**.
 

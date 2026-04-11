@@ -20,11 +20,33 @@
   --lw-sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
 }
 
+html {
+  transition: background-color 1s ease;
+  background-color: var(--lw-bg-end);
+}
+
+/* Catppuccin Mocha dark theme */
+html.dark {
+  --lw-bg: #1e1e2e;
+  --lw-bg-end: #181825;
+  --lw-code-bg: #313244;
+  --lw-code-border: #45475a;
+  --lw-text: #cdd6f4;
+  --lw-muted: #a6adc8;
+  --lw-link: #89b4fa;
+  --lw-link-hover: #b4befe;
+  --lw-border: #45475a;
+}
+
 body {
   font-family: var(--lw-serif);
   background: linear-gradient(to bottom right, var(--lw-bg), var(--lw-bg-end));
   background-attachment: fixed;
   color: var(--lw-text);
+}
+
+*, *::before, *::after {
+  transition: background-color 1s ease, color 1s ease, border-color 1s ease;
 }
 
 a {
@@ -42,6 +64,12 @@ nav,
 
 nav a {
   color: inherit;
+  transition: color 0.15s;
+}
+
+nav a:hover {
+  color: var(--lw-text);
+  text-decoration: underline;
 }
 
 ::selection {
@@ -63,7 +91,67 @@ nav a {
   border-radius: 0.375rem;
 }
 
-/* Shiki (github-light) inlines a white pre background */
-.prose.prose-slate pre.astro-code {
+/* Shiki dual-theme: show correct theme based on html class */
+.prose.prose-slate pre.astro-code,
+pre.astro-code {
   background-color: var(--lw-code-bg) !important;
+}
+
+/* Light: use the light theme spans, hide dark */
+html:not(.dark) .astro-code span[style*="--shiki-dark"] {
+  color: var(--shiki-light) !important;
+}
+
+/* Dark: use the dark theme colors */
+html.dark .astro-code {
+  background-color: #1e1e2e !important;
+}
+
+html.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+}
+
+html.dark .prose.prose-slate {
+  --tw-prose-body: #cdd6f4;
+  --tw-prose-headings: #cdd6f4;
+  --tw-prose-lead: #a6adc8;
+  --tw-prose-links: #89b4fa;
+  --tw-prose-bold: #cdd6f4;
+  --tw-prose-counters: #a6adc8;
+  --tw-prose-bullets: #6c7086;
+  --tw-prose-hr: #45475a;
+  --tw-prose-quotes: #cba6f7;
+  --tw-prose-quote-borders: #45475a;
+  --tw-prose-captions: #a6adc8;
+  --tw-prose-code: #cdd6f4;
+  --tw-prose-pre-code: #cdd6f4;
+  --tw-prose-pre-bg: #313244;
+  --tw-prose-th-borders: #45475a;
+  --tw-prose-td-borders: #313244;
+}
+
+/* Ensure prose headings, body, and links actually use the overridden variables */
+html.dark .prose.prose-slate h1,
+html.dark .prose.prose-slate h2,
+html.dark .prose.prose-slate h3,
+html.dark .prose.prose-slate h4,
+html.dark .prose.prose-slate h5,
+html.dark .prose.prose-slate h6 {
+  color: #cdd6f4;
+}
+
+html.dark .prose.prose-slate p,
+html.dark .prose.prose-slate li,
+html.dark .prose.prose-slate blockquote,
+html.dark .prose.prose-slate strong {
+  color: #cdd6f4;
+}
+
+html.dark .prose.prose-slate a {
+  color: #89b4fa;
+}
+
+html.dark ::selection {
+  color: #cdd6f4;
+  background-color: #45475a;
 }

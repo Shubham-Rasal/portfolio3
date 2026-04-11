@@ -3,8 +3,7 @@ title: My first blog post
 slug: blog-1
 date: 2023-06-16 
 author: Shubham Rasal
-tags:
-  - life
+tags: []
 
 ---
 

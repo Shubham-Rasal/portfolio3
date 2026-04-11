@@ -4,7 +4,6 @@ slug: working-hard
 date: 2025-04-10
 author: Shubham Rasal
 tags:
-  - life
   - philosophy
 ---
 

@@ -5,7 +5,6 @@ date: 2024-10-03
 author: Shubham Rasal
 tags:
   - devlog
-  - web
 ---
 I have always wanted to write technical blogs but I was lazy. But then I recently say few indie hackers publishing what they do on a weekly basis. I felt this writing format is something that I can try and hopefully stick to in the long run.
 

@@ -5,7 +5,6 @@ date: 2024-11-15
 author: Shubham Rasal
 tags:
   - devlog
-  - web
 ---
 I am back with few updates on the projects I am working on. 
 

@@ -16,8 +16,8 @@ for (let i = 0; i < projects.length; i++) {
 <Layout title="Projects">
   <main class="flex flex-col items-center justify-center w-full flex-1 px-4 pt-20 text-left">
     <div class="flex flex-col w-full max-w-3xl">
-      <h1 class="text-3xl font-bold mb-2 text-slate-900">Projects</h1>
-      <p class="text-sm text-slate-600 mb-10">
+      <h1 class="text-3xl font-bold mb-2" style="color: var(--lw-text)">Projects</h1>
+      <p class="text-sm mb-10" style="color: var(--lw-muted)">
         A selection of recent builds and experiments.
       </p>
       {Object.entries(categories).map(([cat, projs]) => {
@@ -25,49 +25,40 @@ for (let i = 0; i < projects.length; i++) {
         return (
           (arr && (arr as any[]).length > 0) && (
             <section class="w-full mb-10">
-              <h2 class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-4">
+              <h2 class="text-xs uppercase tracking-[0.2em] mb-4" style="color: var(--lw-muted)">
                 {cat || "Other"}
               </h2>
-              <ul class="space-y-4 text-sm text-slate-700">
+              <ul class="space-y-4 text-sm">
                 {(arr as any[]).map((project) => (
-                  <li class="border-b border-slate-200 pb-3 last:border-b-0 last:pb-0">
+                  <li class="border-b pb-3 last:border-b-0 last:pb-0" style="border-color: var(--lw-border)">
                     <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                       {project.live || project.github ? (
                         <a
                           href={project.live ? project.live : project.github}
-                          class="text-base font-semibold text-slate-900 hover:text-blue-700"
+                          class="text-base font-semibold hover:underline"
+                          style="color: var(--lw-text)"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           {project.title}
                         </a>
                       ) : (
-                        <span class="text-base font-semibold text-slate-900">{project.title}</span>
+                        <span class="text-base font-semibold" style="color: var(--lw-text)">{project.title}</span>
                       )}
-                      <div class="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.15em] text-slate-500">
+                      <div class="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.15em]" style="color: var(--lw-muted)">
                         {project.live && (
-                          <a
-                            href={project.live}
-                            class="hover:text-blue-700"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <a href={project.live} class="hover:underline" style="color: var(--lw-link)" target="_blank" rel="noopener noreferrer">
                             Live
                           </a>
                         )}
                         {project.github && (
-                          <a
-                            href={project.github}
-                            class="hover:text-blue-700"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
+                          <a href={project.github} class="hover:underline" style="color: var(--lw-link)" target="_blank" rel="noopener noreferrer">
                             GitHub
                           </a>
                         )}
                       </div>
                     </div>
-                    <p class="mt-1 text-sm text-slate-600">{project.description}</p>
+                    <p class="mt-1 text-sm" style="color: var(--lw-muted)">{project.description}</p>
                   </li>
                 ))}
               </ul>

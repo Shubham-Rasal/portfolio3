@@ -5,7 +5,6 @@ date: 2023-10-28
 author: Shubham Rasal
 tags:
   - ai
-  - web
 ---
 
 

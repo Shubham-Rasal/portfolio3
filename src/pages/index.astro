@@ -18,18 +18,26 @@ const recentProjects = [
 ] as const;
 ---
 
+<style>
+  html, body {
+    overflow: hidden;
+    height: 100%;
+  }
+  :global(.dark) .tree-bg {
+    opacity: 0.05 !important;
+  }
+</style>
+
 <Layout title="About">
-  <main class="flex flex-col items-center justify-start w-full min-h-screen p-2 pt-8 text-center relative">
-    <div class="fixed inset-0 pointer-events-none select-none -z-10" aria-hidden="true">
-      <img src="/tree-bg.png" alt="" class="absolute opacity-10" style="width: 120%; max-width: none; bottom: -10%; right: -15%; top: auto; left: auto;" />
-    </div>
-    <div class="flex flex-col items-center w-full max-w-2xl">
-      <h1 class="text-3xl font-bold mb-8 text-slate-900">Shubham Rasal</h1>
-      <section class="w-full text-left mb-8 space-y-2">
+  <main class="flex flex-col items-center justify-start w-full h-screen overflow-hidden p-2 pt-8 text-center relative">
+    <img src="/tree-bg.png" alt="" class="tree-bg" aria-hidden="true" style="position: fixed; width: 120%; max-width: none; bottom: -25%; right: -15%; top: auto; left: auto; opacity: 0.1; pointer-events: none; z-index: 0;" />
+    <div class="flex flex-col items-center w-full max-w-2xl" style="position: relative; z-index: 1;">
+      <h1 class="text-3xl font-bold mb-8" style="color: var(--lw-text)">Shubham Rasal</h1>
+      <section class="w-full text-left mb-8 space-y-2" style="color: var(--lw-text)">
         <ul class="list-disc ml-6 text-base space-y-2">
-          <li>currently SWE @ <span class="font-semibold text-emerald-700">Oracle</span> 
-            <li>it @ <span class="font-semibold text-amber-700">NITK</span></li>
-          <li>prev: SWE intern @ <span class="font-semibold text-emerald-700">Oracle</span> 
+          <li>currently SWE @ <span class="font-semibold text-emerald-600 dark:text-emerald-400">Oracle</span>
+            <li>it @ <span class="font-semibold text-amber-600 dark:text-amber-400">NITK</span></li>
+          <li>prev: SWE intern @ <span class="font-semibold text-emerald-600 dark:text-emerald-400">Oracle</span>
               — Built a workflow visualisation engine (FlowGenie) for the SRE team, moved UI to React, made things smoother for everyone.</li>
           <li class="italic">recently:</li>
           <ul class="ml-6 list-[circle] text-md space-y-2">
@@ -37,17 +45,18 @@ const recentProjects = [
               <li>
                 <a
                   href={project.github}
-                  class="font-semibold text-blue-700 hover:underline"
+                  class="font-semibold hover:underline"
+                  style="color: var(--lw-link)"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {project.title}
                 </a>
-                <span class="text-slate-600"> — {project.description}</span>
+                <span style="color: var(--lw-muted)"> — {project.description}</span>
               </li>
             ))}
           </ul>
-          <li>prev: Back End Developer @ <span class="font-semibold text-emerald-700">Shortsqueeze</span>  — Built APIs, auth, and a doc parser in Go. Made things fast with concurrency.</li>
+          <li>prev: Back End Developer @ <span class="font-semibold text-emerald-600 dark:text-emerald-400">Shortsqueeze</span> — Built APIs, auth, and a doc parser in Go. Made things fast with concurrency.</li>
           <li class="italic">
             my core values
             <ul class="ml-6 mt-2 list-[circle] text-md not-italic space-y-2">
@@ -57,19 +66,19 @@ const recentProjects = [
         </ul>
       </section>
       <div class="flex flex-row w-full justify-start gap-4 mb-8">
-        <a href="mailto:bluequbits@gmail.com" class="hover:scale-110 transition">
-        <MdEmail className="h-6 w-6 text-blue-700" />
+        <a href="mailto:bluequbits@gmail.com" class="hover:scale-110 transition" style="color: var(--lw-link)">
+          <MdEmail className="h-6 w-6" />
         </a>
-        <a href="https://github.com/Shubham-Rasal" class="hover:scale-110 transition">
-        <Github className="h-6 w-6 text-blue-700" />
+        <a href="https://github.com/Shubham-Rasal" class="hover:scale-110 transition" style="color: var(--lw-link)">
+          <Github className="h-6 w-6" />
         </a>
-        <a href="https://x.com/bluequbit" class="hover:scale-110 transition">
-        <Twitter className="h-6 w-6 text-blue-700" />
+        <a href="https://x.com/bluequbit" class="hover:scale-110 transition" style="color: var(--lw-link)">
+          <Twitter className="h-6 w-6" />
         </a>
       </div>
-      <div class="w-full ">
-        <a href="/projects" class="text-slate-700 hover:underline hover:text-blue-700">see what i've built →</a>  or
-        <a href="/writing" class="text-slate-700 hover:underline hover:text-blue-700">read my writing →</a>
+      <div class="w-full">
+        <a href="/projects" class="hover:underline" style="color: var(--lw-muted)">see what i've built →</a>  or
+        <a href="/writing" class="hover:underline" style="color: var(--lw-muted)">read my writing →</a>
       </div>
      
       

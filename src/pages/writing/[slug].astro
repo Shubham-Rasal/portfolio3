@@ -75,6 +75,39 @@ const ogImageUrl = new URL(`/open-graph/writing/${entry.id}.png`, Astro.site).hr
 
     <div class="comment giscus mt-8"></div>
   </article>
+  <script>
+    document.querySelectorAll('pre').forEach((pre) => {
+      const wrapper = document.createElement('div');
+      wrapper.style.cssText = 'position:relative';
+      pre.parentNode!.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+
+      const btn = document.createElement('button');
+      btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+      btn.title = 'Copy code';
+      btn.style.cssText = 'position:absolute;top:0.5rem;right:0.5rem;padding:0.3rem;background:transparent;border:none;cursor:pointer;color:#94a3b8;border-radius:4px;display:flex;align-items:center;transition:color 0.15s';
+
+      btn.addEventListener('mouseenter', () => btn.style.color = '#475569');
+      btn.addEventListener('mouseleave', () => {
+        if (!btn.dataset.copied) btn.style.color = '#94a3b8';
+      });
+
+      btn.addEventListener('click', async () => {
+        const code = pre.querySelector('code')?.innerText ?? pre.innerText;
+        await navigator.clipboard.writeText(code);
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+        btn.style.color = '#16a34a';
+        btn.dataset.copied = 'true';
+        setTimeout(() => {
+          btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+          btn.style.color = '#94a3b8';
+          delete btn.dataset.copied;
+        }, 2000);
+      });
+
+      wrapper.appendChild(btn);
+    });
+  </script>
   <script
     src="https://giscus.app/client.js"
     data-repo="Shubham-Rasal/portfolio2"

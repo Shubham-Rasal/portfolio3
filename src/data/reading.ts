@@ -43,7 +43,7 @@ export interface ReadingCategory {
 }
 
 export const readingIntro =
-  "Papers and posts I’m circling—links open in a new tab.";
+  "Papers and posts I’m circling.";
 
 export const readingCategories: ReadingCategory[] = [
   {

@@ -41,26 +41,27 @@ export default function ReadingPageContent({ categories }: Props) {
           <header className="mb-1">
             <h2
               id={`cat-${cat.id}`}
-              className="text-[11px] font-medium uppercase tracking-[0.16em] text-slate-400"
+              className="text-[11px] font-medium uppercase tracking-[0.16em]"
+              style={{ color: "var(--lw-muted)" }}
             >
               {cat.title}
             </h2>
             {cat.subtitle ? (
-              <p className="mt-1 text-[13px] leading-snug text-slate-500">
+              <p className="mt-1 text-[13px] leading-snug" style={{ color: "var(--lw-muted)" }}>
                 {cat.subtitle}
               </p>
             ) : null}
           </header>
 
-          <ul className="mt-4 border-t border-slate-200/70 divide-y divide-slate-200/70">
+          <ul className="mt-4 border-t divide-y" style={{ borderColor: "var(--lw-border)" }}>
             {cat.items.map((item) => (
-              <li key={`${cat.id}-${item.title}`} className="py-3.5 first:pt-3">
+              <li key={`${cat.id}-${item.title}`} className="py-3.5 first:pt-3" style={{ borderColor: "var(--lw-border)" }}>
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-serif text-[1.05rem] sm:text-[1.08rem] font-normal leading-snug text-slate-800">
+                    <h3 className="font-serif text-[1.05rem] sm:text-[1.08rem] font-normal leading-snug" style={{ color: "var(--lw-text)" }}>
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-[13px] leading-relaxed text-slate-500">
+                    <p className="mt-1 text-[13px] leading-relaxed" style={{ color: "var(--lw-muted)" }}>
                       {item.hook}
                     </p>
                   </div>
@@ -73,7 +74,8 @@ export default function ReadingPageContent({ categories }: Props) {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[13px] text-slate-500 transition hover:text-slate-800"
+                          className="inline-flex items-center gap-1 text-[13px] transition"
+                          style={{ color: "var(--lw-muted)" }}
                         >
                           <Icon
                             className="h-3 w-3 shrink-0 opacity-50"
