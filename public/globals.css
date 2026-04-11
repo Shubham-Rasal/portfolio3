@@ -86,29 +86,29 @@ nav a:hover {
   --tw-prose-pre-code: #1e293b;
 }
 
+/* Don't let prose override Shiki's per-token colors */
+.prose.prose-slate pre.astro-code code {
+  color: inherit;
+}
+
 .prose.prose-slate pre {
   border: 1px solid var(--lw-code-border);
   border-radius: 0.375rem;
 }
 
-/* Shiki dual-theme: show correct theme based on html class */
-.prose.prose-slate pre.astro-code,
-pre.astro-code {
-  background-color: var(--lw-code-bg) !important;
-}
+/* Shiki dual-theme:
+   Light mode → Shiki writes color directly as inline style; no override needed.
+   Dark mode  → override inline color with the --shiki-dark CSS variable. */
 
-/* Light: use the light theme spans, hide dark */
-html:not(.dark) .astro-code span[style*="--shiki-dark"] {
-  color: var(--shiki-light) !important;
-}
-
-/* Dark: use the dark theme colors */
-html.dark .astro-code {
-  background-color: #1e1e2e !important;
-}
-
-html.dark .astro-code span {
+html.dark pre.astro-code {
+  background-color: #18182a !important;
+  border-color: #2e2e42 !important;
   color: var(--shiki-dark) !important;
+}
+
+html.dark pre.astro-code span {
+  color: var(--shiki-dark) !important;
+  font-style: var(--shiki-dark-font-style) !important;
 }
 
 html.dark .prose.prose-slate {
@@ -151,7 +151,120 @@ html.dark .prose.prose-slate a {
   color: #89b4fa;
 }
 
+html.dark .prose.prose-slate th {
+  color: #cdd6f4;
+}
+
 html.dark ::selection {
   color: #cdd6f4;
   background-color: #45475a;
 }
+
+/* ── Trace diagram (blog: inside-cursor-agent-traces) ── */
+.trace {
+  margin: 2.5rem 0;
+  border: 1px solid #d4c9b8;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'DM Mono', 'Fira Mono', monospace;
+}
+
+.trace-header {
+  background: #ede6d8;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a7f6e;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.trace-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #b07f30;
+  flex-shrink: 0;
+}
+
+.trace-step {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  border-top: 1px solid #e0d8cc;
+  background: #f5ede0;
+}
+
+.trace-time {
+  padding: 0.9rem 1rem 0.9rem 1.25rem;
+  font-size: 0.65rem;
+  color: #9a8f7e;
+  border-right: 1px solid #e0d8cc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.trace-kind {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.trace-kind.user     { color: #2c5fad; }
+.trace-kind.ai       { color: #b07f30; }
+.trace-kind.thinking { color: #b07f30; }
+.trace-kind.tool     { color: #287a4a; }
+.trace-kind.data     { color: #a04a20; }
+
+.trace-body {
+  padding: 0.85rem 1.25rem;
+  font-size: 0.72rem;
+  line-height: 1.65;
+  color: #5a5040;
+}
+
+.trace-body .hi  { color: #b07f30; }
+.trace-body .dim { color: #a09880; }
+.trace-body .ok  { color: #287a4a; }
+.trace-body .em  { color: #2c5fad; }
+.trace-body .ts  { color: #1f2937; }
+
+/* Dark mode overrides for trace */
+html.dark .trace {
+  border-color: #2e2e42;
+}
+
+html.dark .trace-header {
+  background: #18182a;
+  color: #5a5a7a;
+}
+
+html.dark .trace-dot {
+  background: #c9a660;
+}
+
+html.dark .trace-step {
+  background: #1c1c2e;
+  border-top-color: #252538;
+}
+
+html.dark .trace-time {
+  color: #4a4a62;
+  border-right-color: #252538;
+}
+
+html.dark .trace-kind.user     { color: #6b90d4; }
+html.dark .trace-kind.ai       { color: #c9a660; }
+html.dark .trace-kind.thinking { color: #c9a660; }
+html.dark .trace-kind.tool     { color: #6dc98a; }
+html.dark .trace-kind.data     { color: #c87a50; }
+
+html.dark .trace-body          { color: #9090b0; }
+html.dark .trace-body .hi      { color: #c9a660; }
+html.dark .trace-body .dim     { color: #4a4a62; }
+html.dark .trace-body .ok      { color: #6dc98a; }
+html.dark .trace-body .em      { color: #6b90d4; }
+html.dark .trace-body .ts      { color: #dbd5c0; }

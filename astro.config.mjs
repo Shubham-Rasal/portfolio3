@@ -10,6 +10,9 @@ import remarkToc from 'remark-toc';
 import vercel from '@astrojs/vercel';
 
 import mdx from '@astrojs/mdx';
+import cursorTracesThemeRaw from './src/themes/cursor-traces.json';
+/** @type {any} */
+const cursorTracesTheme = cursorTracesThemeRaw;
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +25,7 @@ export default defineConfig({
     shikiConfig: {
       themes: {
         light: 'github-light',
-        dark: 'catppuccin-mocha',
+        dark: cursorTracesTheme,
       },
     },
     remarkPlugins: [remarkToc],
