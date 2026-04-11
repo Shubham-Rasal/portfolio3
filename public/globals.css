@@ -35,7 +35,7 @@ html.dark {
   --lw-muted: #a6adc8;
   --lw-link: #89b4fa;
   --lw-link-hover: #b4befe;
-  --lw-border: #45475a;
+  --lw-border: transparent;
 }
 
 body {
