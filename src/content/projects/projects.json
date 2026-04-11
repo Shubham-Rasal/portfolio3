@@ -4,6 +4,7 @@
     "title": "sam",
     "description": "Agentic video editor — Remotion timeline, OpenCode agent, FFmpeg pipeline (Electron).",
     "github": "https://github.com/Shubham-Rasal/sam",
+    "live": "https://sam.shubhamrasal.com",
     "active": true,
     "category": "Recent"
   },
@@ -88,14 +89,6 @@
     "category": "Web3 & trading"
   },
   {
-    "index": 31,
-    "title": "resend-cli-og",
-    "description": "The official CLI for Resend (upstream contributions).",
-    "github": "https://github.com/Shubham-Rasal/resend-cli-og",
-    "active": true,
-    "category": "DevTools"
-  },
-  {
     "index": 32,
     "title": "resend-cli",
     "description": "CLI for sending email programmatically with Resend.",
@@ -140,14 +133,6 @@
     "title": "cards",
     "description": "Turn any site into a power card.",
     "github": "https://github.com/Shubham-Rasal/cards",
-    "active": true,
-    "category": "Apps"
-  },
-  {
-    "index": 38,
-    "title": "Feedo",
-    "description": "Collect feedback from users in a simple way.",
-    "github": "https://github.com/Shubham-Rasal/Feedo",
     "active": true,
     "category": "Apps"
   },

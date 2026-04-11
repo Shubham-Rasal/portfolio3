@@ -8,8 +8,8 @@
   --lw-bg: #f5e8d5;
   --lw-bg-end: #e8ddd5;
   /* Fenced code / diagram blocks: warm sand, slightly deeper than page */
-  --lw-code-bg: #efe6d8;
-  --lw-code-border: #e3d7c4;
+  --lw-code-bg: #fdf7f0;
+  --lw-code-border: #ede4d6;
   --lw-text: #1f2937;
   --lw-muted: #6b7280;
   --lw-link: #1d4ed8;
@@ -46,7 +46,7 @@ nav a {
 
 ::selection {
   color: #1f2937;
-  background-color: #fde68a;
+  background-color: #d4bfa0;
 }
 
 /*

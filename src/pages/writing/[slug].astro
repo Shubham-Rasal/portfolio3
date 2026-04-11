@@ -4,6 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import { render } from "astro:content";
 import { getEntry } from "astro:content";
 import { formatDateMedium } from "../../utils/dateFormat";
+import Sidenote from "../../content/components/Sidenote.tsx";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
@@ -38,7 +39,7 @@ const ogImageUrl = new URL(`/open-graph/writing/${entry.id}.png`, Astro.site).hr
 
 <Layout title={entry.data.title} ogImage={ogImageUrl}>
   <article
-    class="px-6 sm:px-6 py-2 sm:py-16 lg:py-12 mx-auto max-w-4xl text-lg text-slate-800"
+    class="px-6 sm:px-6 py-2 sm:py-16 lg:py-12 mx-auto max-w-6xl text-lg text-slate-800"
   >
     <button class="my-8 py-8 flex text-slate-600 hover:text-slate-900">
       <a href="/writing" class="text-inherit"> &larr; Back to writing</a>
@@ -69,7 +70,7 @@ const ogImageUrl = new URL(`/open-graph/writing/${entry.id}.png`, Astro.site).hr
         }
       </div>
 
-      <Content components={{}}/>
+      <Content components={{ Sidenote }}/>
     </div>
 
     <div class="comment giscus mt-8"></div>

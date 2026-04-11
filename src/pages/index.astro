@@ -7,8 +7,8 @@ const recentProjects = [
   {
     title: "sam",
     description:
-      "Agentic video editor — Just prompt your video into life",
-    github: "https://github.com/Shubham-Rasal/sam",
+      "An AI-native video editor that works with your claude code, opencode, codex, etc to edit videos by prompting",
+    github: "https://sam.shubhamrasal.com",
   },
   {
     title: "OpenVibe",
@@ -19,7 +19,10 @@ const recentProjects = [
 ---
 
 <Layout title="About">
-  <main class="flex flex-col items-center justify-center w-full flex-1 p-2 pt-20 text-center">
+  <main class="flex flex-col items-center justify-start w-full min-h-screen p-2 pt-8 text-center relative">
+    <div class="fixed inset-0 pointer-events-none select-none -z-10" aria-hidden="true">
+      <img src="/tree-bg.png" alt="" class="absolute opacity-10" style="width: 120%; max-width: none; bottom: -10%; right: -15%; top: auto; left: auto;" />
+    </div>
     <div class="flex flex-col items-center w-full max-w-2xl">
       <h1 class="text-3xl font-bold mb-8 text-slate-900">Shubham Rasal</h1>
       <section class="w-full text-left mb-8 space-y-2">
@@ -73,3 +76,4 @@ const recentProjects = [
     </div>
   </main>
 </Layout>
+
