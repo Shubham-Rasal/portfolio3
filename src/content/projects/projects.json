@@ -2,7 +2,7 @@
   {
     "index": 20,
     "title": "sam",
-    "description": "Agentic video editor — Remotion timeline, OpenCode agent, FFmpeg pipeline (Electron).",
+    "description": "Edit videos by describing what you want — an AI agent handles the cuts, transitions, and effects.",
     "github": "https://github.com/Shubham-Rasal/sam",
     "live": "https://sam.shubhamrasal.com",
     "active": true,
@@ -10,16 +10,24 @@
   },
   {
     "index": 21,
-    "title": "OpenVibe",
-    "description": "Open-source web UI for OpenCode — chat, build, and code with AI.",
-    "github": "https://github.com/Shubham-Rasal/openvibe",
+    "title": "open-conductor",
+    "description": "A desktop app that lets you run and manage multiple local AI coding agents side by side.",
+    "github": "https://github.com/Shubham-Rasal/open-conductor",
+    "active": true,
+    "category": "Recent"
+  },
+  {
+    "index": 21,
+    "title": "radix-mlp-mlx",
+    "description": "Train and run neural networks fully on your Mac — fast, local, no cloud needed.",
+    "github": "https://github.com/Shubham-Rasal/radix-mlp-mlx",
     "active": true,
     "category": "Recent"
   },
   {
     "index": 22,
     "title": "fairy",
-    "description": "Obsidian plugin — fill placeholders in notes with Gemini, web search, and vault context.",
+    "description": "An Obsidian plugin that fills in note placeholders using AI, web search, and your own vault.",
     "github": "https://github.com/Shubham-Rasal/fairy",
     "active": true,
     "category": "Recent"
@@ -27,55 +35,23 @@
   {
     "index": 23,
     "title": "competitor-analyser",
-    "description": "AI competitor intelligence — discovers rivals, SWOT analysis, x402-gated, ERC-8004.",
+    "description": "Drop in your product and get a full competitor breakdown — who they are, their strengths, and where you win.",
     "github": "https://github.com/Shubham-Rasal/competitor-analyser",
-    "active": true,
-    "category": "Recent"
-  },
-  {
-    "index": 24,
-    "title": "brand-agent",
-    "description": "OpenBrand agent — extract logos, colors, and images from any URL; x402, Filecoin storage.",
-    "github": "https://github.com/Shubham-Rasal/brand-agent",
-    "active": true,
-    "category": "Recent"
-  },
-  {
-    "index": 25,
-    "title": "anp-chat-client",
-    "description": "Open-source MCP client — multi-provider AI chatbot.",
-    "github": "https://github.com/Shubham-Rasal/anp-chat-client",
-    "active": true,
-    "category": "Recent"
-  },
-  {
-    "index": 26,
-    "title": "mstudio",
-    "description": "Main site — Next.js blog and content station.",
-    "github": "https://github.com/Shubham-Rasal/mstudio",
     "active": true,
     "category": "Recent"
   },
   {
     "index": 27,
     "title": "stackforge-v2",
-    "description": "Vibe-code fullstack dapps on Stacks L2.",
+    "description": "Describe a web3 app and get a working fullstack dapp scaffolded and deployed for you.",
     "github": "https://github.com/Shubham-Rasal/stackforge-v2",
-    "active": true,
-    "category": "Web3 & trading"
-  },
-  {
-    "index": 28,
-    "title": "FullStackr",
-    "description": "AI-powered fullstack dapp builder on Stacks.",
-    "github": "https://github.com/Shubham-Rasal/FullStackr",
     "active": true,
     "category": "Web3 & trading"
   },
   {
     "index": 29,
     "title": "polymer",
-    "description": "Polymarket toolkit — trading, CLOB client, streaming market data (Rust).",
+    "description": "A toolkit for trading on Polymarket — place bets, stream live odds, and manage positions.",
     "github": "https://github.com/Shubham-Rasal/polymer",
     "active": true,
     "category": "Web3 & trading"
@@ -83,7 +59,7 @@
   {
     "index": 30,
     "title": "foc-worker",
-    "description": "Persistent Akash worker for Filecoin CDN uploads via Synapse SDK.",
+    "description": "A background worker that uploads files to a decentralized CDN and keeps them available.",
     "github": "https://github.com/Shubham-Rasal/foc-worker",
     "active": true,
     "category": "Web3 & trading"
@@ -91,7 +67,7 @@
   {
     "index": 32,
     "title": "resend-cli",
-    "description": "CLI for sending email programmatically with Resend.",
+    "description": "Send emails from your terminal without writing any code.",
     "github": "https://github.com/Shubham-Rasal/resend-cli",
     "active": true,
     "category": "DevTools"
@@ -99,7 +75,7 @@
   {
     "index": 33,
     "title": "investor-finder",
-    "description": "Agent that finds investors for your startup.",
+    "description": "Describe your startup and get a list of investors who are likely to fund it.",
     "github": "https://github.com/Shubham-Rasal/investor-finder",
     "active": true,
     "category": "Agents"
@@ -107,39 +83,23 @@
   {
     "index": 34,
     "title": "seo-agent",
-    "description": "SEO agent experiment.",
+    "description": "Audits your site and tells you exactly what to fix to rank higher on search.",
     "github": "https://github.com/Shubham-Rasal/seo-agent",
-    "active": true,
-    "category": "Agents"
-  },
-  {
-    "index": 35,
-    "title": "atomicbot",
-    "description": "Personal AI assistant — any OS, any platform.",
-    "github": "https://github.com/Shubham-Rasal/atomicbot",
     "active": true,
     "category": "Agents"
   },
   {
     "index": 36,
     "title": "FreePress",
-    "description": "Run your own publication on your machine — discover others, share knowledge.",
+    "description": "Host your own newsletter or blog from your machine and discover others doing the same.",
     "github": "https://github.com/Shubham-Rasal/FreePress",
-    "active": true,
-    "category": "Apps"
-  },
-  {
-    "index": 37,
-    "title": "cards",
-    "description": "Turn any site into a power card.",
-    "github": "https://github.com/Shubham-Rasal/cards",
     "active": true,
     "category": "Apps"
   },
   {
     "index": 9,
     "title": "Settle",
-    "description": "Universal USDC payment gateway for merchants. Accept on any chain, settle wherever you want.",
+    "description": "Let merchants accept crypto payments on any chain and receive funds wherever they want.",
     "github": "https://github.com/Shubham-Rasal/settle",
     "live": "https://settle.capital/",
     "active": true,
@@ -148,7 +108,7 @@
   {
     "index": 10,
     "title": "Agent-Nexus-Protocol",
-    "description": "ANP - Agent Nexus Protocol.",
+    "description": "A protocol for AI agents to discover, connect, and collaborate with each other.",
     "github": "https://github.com/Shubham-Rasal/Agent-Nexus-Protocol",
     "live": "https://agent-nexus-protocol.vercel.app/",
     "active": true,
@@ -157,7 +117,7 @@
   {
     "index": 11,
     "title": "Groundline",
-    "description": "A graphDB with persistance on IPFS.",
+    "description": "A graph database that stores your data permanently on a decentralized network.",
     "github": "https://github.com/Shubham-Rasal/Agent-Nexus-Protocol/tree/master/groundline",
     "active": true,
     "category": "library"
@@ -165,7 +125,7 @@
   {
     "index": 12,
     "title": "Autocomplete",
-    "description": "A React-based AI-powered code editor component with intelligent code suggestions.",
+    "description": "Drop this into your editor and get AI-powered code suggestions as you type.",
     "github": "https://www.npmjs.com/package/@shubhamrasal/autocomplete",
     "active": true,
     "category": "library"
@@ -173,7 +133,7 @@
   {
     "index": 13,
     "title": "KrishiAI",
-    "description": "An app for farmers in India",
+    "description": "Helps farmers in India get crop advice, weather alerts, and market prices in their language.",
     "github": "https://github.com/Shubham-Rasal/KrishiAI",
     "active": true,
     "category": "app"
@@ -181,7 +141,7 @@
   {
     "index": 14,
     "title": "otakuverse",
-    "description": "A anime translation platform.",
+    "description": "A platform for translating and sharing anime content collaboratively.",
     "github": "https://github.com/Shubham-Rasal/otakuverse",
     "active": false,
     "category": "fullstack"
@@ -189,7 +149,7 @@
   {
     "index": 4,
     "title": "dGame",
-    "description": "Multiplayer Doodle Game.",
+    "description": "Draw something and play Pictionary-style with friends in real time.",
     "live": "https://dgame.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/wec22-multiplayer-game",
     "active": false,
@@ -198,7 +158,7 @@
   {
     "index": 1,
     "title": "Harveeco",
-    "description": "A Farmer's DataDAO. A decentralised application for farmers to store and share their data.",
+    "description": "Farmers own and share their agricultural data, and earn from it — no middlemen.",
     "live": "https://harveeco.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
     "active": false,
@@ -207,7 +167,7 @@
   {
     "index": 2,
     "title": "Deano",
-    "description": "Decentralised Annotation Network.",
+    "description": "A platform where anyone can label AI training data and get paid for their work.",
     "live": "https://deano.vercel.app/",
     "github": "https://github.com/Shubham-Rasal/Deano",
     "active": false,
@@ -216,7 +176,7 @@
   {
     "index": 7,
     "title": "CipherCraft",
-    "description": "A Decentralised Hub for federated model training on access controlled private datasets.",
+    "description": "Train AI models on private data from multiple parties without anyone ever seeing the raw data.",
     "live": "https://ethglobal.com/showcase/ciphercraft-3g8kp",
     "github": "https://github.com/Shubham-Rasal/CipherCraft",
     "active": false,
