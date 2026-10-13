@@ -17,26 +17,14 @@ There are also task-specific harnesses that currently outperform generic ones in
 
 ## The harness landscape
 
-```text
-                +---------------------------+
-                |        Your Work          |
-                +-------------+-------------+
-                              |
-         +--------------------+--------------------+
-         |                                         |
-+--------v--------+                       +--------v--------+
-| Autonomous      |                       | Hands-on        |
-| harnesses       |                       | harnesses       |
-| (background)    |                       | (tight loop)    |
-+--------+--------+                       +--------+--------+
-         |                                         |
-         +--------------------+--------------------+
-                              |
-                    +---------v---------+
-                    | Task-specific     |
-                    | harnesses (niche) |
-                    +-------------------+
-```
+<iframe
+  src="https://hairline.lucasmarkes.com/skill/hairline-funnel.html?play=1&intensity=1"
+  title="Harness landscape diagram"
+  style="width:100%;max-width:720px;aspect-ratio:5/4;border:0;border-radius:12px;display:block;margin:1rem auto;"
+  loading="lazy"
+></iframe>
+
+The funnel shape captures the flow from broad work intake to focused execution paths across autonomous, hands-on, and niche harnesses.
 
 ## Code review will be dead soon
 
@@ -81,12 +69,12 @@ Instead, encode your knowledge into:
 
 A narrow tool for pulling logs from a platform can be far better than forcing an agent to hand-roll the same steps repeatedly in-context.
 
-```text
-+---------------------+     +--------------------+     +----------------------+
-| Thin harness        | --> | Fat skills & tools | --> | Reliable agent output |
-| (replaceable shell) |     | (durable leverage) |     | at higher throughput  |
-+---------------------+     +--------------------+     +----------------------+
-```
+<iframe
+  src="https://hairline.lucasmarkes.com/skill/hairline-clearance.html?play=1&intensity=0.85"
+  title="Thin harness and fat skills diagram"
+  style="width:100%;max-width:720px;aspect-ratio:5/4;border:0;border-radius:12px;display:block;margin:1rem auto;"
+  loading="lazy"
+></iframe>
 
 ## Compounding is the core advantage
 
@@ -105,24 +93,12 @@ In an agent-first org, you need to move one level up, but only after building tr
 
 Architecture, lint rules, tests, and guardrails are how you convert repeat corrections into reliable execution.
 
-```text
-+---------------------------+
-| Business goals / strategy |
-+-------------+-------------+
-              |
-+-------------v-------------+
-| Plans / prompts / specs   |
-+-------------+-------------+
-              |
-+-------------v-------------+
-| Agents executing tasks    |
-+-------------+-------------+
-              |
-+-------------v-------------+
-| Guardrails: evals/tests   |
-| + observability + tools   |
-+---------------------------+
-```
+<iframe
+  src="https://hairline.lucasmarkes.com/skill/hairline-sidings.html?play=1&intensity=0.9"
+  title="Trust graph and guardrails diagram"
+  style="width:100%;max-width:720px;aspect-ratio:5/4;border:0;border-radius:12px;display:block;margin:1rem auto;"
+  loading="lazy"
+></iframe>
 
 ## The real job shift
 
