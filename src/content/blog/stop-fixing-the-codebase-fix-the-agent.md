@@ -17,12 +17,22 @@ There are also task-specific harnesses that currently outperform generic ones in
 
 ## The harness landscape
 
-<iframe
-  src="https://hairline.lucasmarkes.com/skill/hairline-funnel.html?play=1&intensity=1"
-  title="Harness landscape diagram"
-  style="width:100%;max-width:720px;aspect-ratio:5/4;border:0;border-radius:12px;display:block;margin:1rem auto;"
-  loading="lazy"
-></iframe>
+<div aria-hidden="true" style="margin:0.75rem 0 1.1rem; color: inherit; opacity: 0.62;">
+  <svg viewBox="0 0 720 170" role="img" style="width:100%;height:auto;display:block;">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="34" y="26" width="180" height="34" rx="10"></rect>
+      <text x="124" y="47" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Autonomous</text>
+      <rect x="270" y="26" width="180" height="34" rx="10"></rect>
+      <text x="360" y="47" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Hands-on</text>
+      <rect x="506" y="26" width="180" height="34" rx="10"></rect>
+      <text x="596" y="47" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Task-specific</text>
+      <path d="M124 60 L124 93 L360 93 L360 60"></path>
+      <path d="M596 60 L596 93 L360 93"></path>
+      <rect x="276" y="104" width="168" height="34" rx="10"></rect>
+      <text x="360" y="125" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">General agents</text>
+    </g>
+  </svg>
+</div>
 
 The funnel shape captures the flow from broad work intake to focused execution paths across autonomous, hands-on, and niche harnesses.
 
@@ -69,12 +79,23 @@ Instead, encode your knowledge into:
 
 A narrow tool for pulling logs from a platform can be far better than forcing an agent to hand-roll the same steps repeatedly in-context.
 
-<iframe
-  src="https://hairline.lucasmarkes.com/skill/hairline-clearance.html?play=1&intensity=0.85"
-  title="Thin harness and fat skills diagram"
-  style="width:100%;max-width:720px;aspect-ratio:5/4;border:0;border-radius:12px;display:block;margin:1rem auto;"
-  loading="lazy"
-></iframe>
+<div aria-hidden="true" style="margin:0.75rem 0 1.1rem; color: inherit; opacity: 0.62;">
+  <svg viewBox="0 0 720 150" role="img" style="width:100%;height:auto;display:block;">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="26" y="42" width="170" height="30" rx="9"></rect>
+      <text x="111" y="61" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Thin harness</text>
+      <path d="M206 57 L296 57"></path>
+      <path d="M289 52 L296 57 L289 62"></path>
+      <rect x="306" y="30" width="170" height="54" rx="10"></rect>
+      <text x="391" y="52" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Skills + tools</text>
+      <text x="391" y="68" text-anchor="middle" fill="currentColor" font-size="12" stroke="none">encoded preferences</text>
+      <path d="M486 57 L576 57"></path>
+      <path d="M569 52 L576 57 L569 62"></path>
+      <rect x="586" y="42" width="108" height="30" rx="9"></rect>
+      <text x="640" y="61" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Output</text>
+    </g>
+  </svg>
+</div>
 
 ## Compounding is the core advantage
 
@@ -93,12 +114,26 @@ In an agent-first org, you need to move one level up, but only after building tr
 
 Architecture, lint rules, tests, and guardrails are how you convert repeat corrections into reliable execution.
 
-<iframe
-  src="https://hairline.lucasmarkes.com/skill/hairline-sidings.html?play=1&intensity=0.9"
-  title="Trust graph and guardrails diagram"
-  style="width:100%;max-width:720px;aspect-ratio:5/4;border:0;border-radius:12px;display:block;margin:1rem auto;"
-  loading="lazy"
-></iframe>
+<div aria-hidden="true" style="margin:0.75rem 0 1.1rem; color: inherit; opacity: 0.62;">
+  <svg viewBox="0 0 720 180" role="img" style="width:100%;height:auto;display:block;">
+    <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="272" y="18" width="176" height="30" rx="9"></rect>
+      <text x="360" y="37" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Business goals</text>
+      <path d="M360 48 L360 72"></path>
+      <rect x="254" y="72" width="212" height="30" rx="9"></rect>
+      <text x="360" y="91" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Plans / prompts / specs</text>
+      <path d="M360 102 L360 126"></path>
+      <rect x="268" y="126" width="184" height="30" rx="9"></rect>
+      <text x="360" y="145" text-anchor="middle" fill="currentColor" font-size="13" stroke="none">Agent execution</text>
+      <path d="M268 141 L194 141"></path>
+      <path d="M452 141 L526 141"></path>
+      <rect x="48" y="126" width="136" height="30" rx="9"></rect>
+      <text x="116" y="145" text-anchor="middle" fill="currentColor" font-size="12.5" stroke="none">Tests / evals</text>
+      <rect x="536" y="126" width="136" height="30" rx="9"></rect>
+      <text x="604" y="145" text-anchor="middle" fill="currentColor" font-size="12.5" stroke="none">Observability</text>
+    </g>
+  </svg>
+</div>
 
 ## The real job shift
 
